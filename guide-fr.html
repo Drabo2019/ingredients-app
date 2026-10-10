@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingredients – Mode d’emploi étape par étape</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
+:root { --bg:#F6F1E7; --card:#FFFDF8; --text:#1D2420; --muted:#5C625D; --border:#E4DCCB; --primary:#1F5F4A; --soft:#DCEBE2;
+  --ok:#11643A; --okbg:#E1F2E6; --warn:#7A4B00; --warnbg:#FBEACB; --bad:#A1231B; --badbg:#FADFDB; --vio:#6A2C91; --viobg:#F1E5F8; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:'Nunito', 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.55; }
+.wrap { max-width:900px; margin:0 auto; padding:16px; }
+header.top { display:flex; align-items:center; gap:12px; padding:8px 0 4px; }
+header.top img { width:52px; height:52px; border-radius:14px; }
+header.top b { font-size:22px; font-weight:800; display:block; }
+header.top span { color:var(--muted); font-weight:600; font-size:15px; }
+nav.langs { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
+nav.langs a { text-decoration:none; color:var(--text); border:1px solid var(--border); background:var(--card); border-radius:999px; padding:6px 14px; font-weight:700; font-size:15px; }
+nav.langs a.on { background:var(--primary); border-color:var(--primary); color:#fff; }
+h1 { font-size:30px; line-height:1.2; margin:18px 0 6px; font-weight:800; }
+h2 { font-size:24px; margin:34px 0 10px; color:var(--primary); font-weight:800; page-break-after:avoid; }
+h3 { font-size:19px; margin:20px 0 6px; font-weight:800; page-break-after:avoid; }
+p.lead { color:var(--muted); font-size:18px; margin:0 0 12px; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:16px 18px; margin:12px 0; box-shadow:0 2px 10px rgba(52,44,25,.06); page-break-inside:avoid; }
+.box { border-radius:14px; padding:12px 16px; margin:12px 0; border:1px solid var(--border); page-break-inside:avoid; }
+.tip { background:var(--soft); border-color:var(--soft); } .warn { background:var(--warnbg); border-color:#e9cf9a; } .stop { background:var(--badbg); }
+.step { display:grid; grid-template-columns:1fr 250px; gap:22px; align-items:start; background:var(--card); border:1px solid var(--border); border-radius:20px; padding:18px; margin:16px 0; page-break-inside:avoid; }
+.step.noimg { grid-template-columns:1fr; }
+.step img { width:250px; aspect-ratio:1/2; object-fit:cover; object-position:top; border-radius:22px; border:6px solid #1D2420; box-shadow:0 4px 16px rgba(0,0,0,.15); background:#fff; }
+.num { display:inline-flex; width:34px; height:34px; border-radius:50%; background:var(--primary); color:#fff; font-weight:800; align-items:center; justify-content:center; margin-right:8px; flex:none; }
+.step h3 { display:flex; align-items:center; margin-top:0; }
+.btn, .path { font-weight:700; background:#EFE8DA; padding:1px 7px; border-radius:6px; white-space:nowrap; }
+.path { white-space:normal; }
+.red { background:var(--badbg); color:var(--bad); font-weight:800; padding:0 5px; border-radius:4px; }
+.orange { background:var(--warnbg); color:var(--warn); font-weight:800; padding:0 5px; border-radius:4px; }
+.violet { background:var(--viobg); color:var(--vio); font-weight:800; padding:0 5px; border-radius:4px; }
+.green { background:var(--okbg); color:var(--ok); font-weight:800; padding:0 5px; border-radius:4px; }
+ol, ul { padding-left:22px; } li { margin:5px 0; }
+table { border-collapse:collapse; width:100%; font-size:15px; background:var(--card); }
+th, td { border:1px solid var(--border); padding:7px 9px; text-align:left; vertical-align:top; } th { background:#EFE8DA; }
+pre { background:#1D2420; color:#EEF2EC; padding:10px 12px; border-radius:10px; white-space:pre-wrap; word-break:break-all; }
+a { color:var(--primary); font-weight:700; }
+.dl { display:grid; gap:12px; margin:14px 0; }
+.dl a.big { display:flex; align-items:center; justify-content:space-between; gap:12px; text-decoration:none; background:var(--primary); color:#fff; border-radius:18px; padding:16px 20px; font-size:19px; font-weight:800; }
+.dl a.big > span:last-child { white-space:nowrap; }
+.dl a.big small { display:block; font-weight:600; font-size:14px; opacity:.9; }
+.dl a.alt { background:var(--card); color:var(--text); border:1px solid var(--border); }
+.dl a.alt small { color:var(--muted); }
+.toc { columns:2; } .toc li { break-inside:avoid; }
+footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
+@media (max-width:640px) { .step { grid-template-columns:1fr; } .step img { width:100%; max-width:300px; justify-self:center; } .toc { columns:1; } h1 { font-size:26px; } }
+@media print { body { background:#fff; font-size:12pt; } .wrap { max-width:none; } nav.langs, .noprint { display:none; } .step { grid-template-columns:1fr 200px; } .step img { width:200px; } h2 { page-break-before:auto; } .pb { page-break-before:always; } }
+</style></head>
+<body><div class="wrap">
+<header class="top"><img src="img/icon.png" alt=""><div><b>Ingredients</b><span>Savoir ce qu’il y a dedans.</span></div></header>
+<nav class="langs"><a href="anleitung.html" class="">Deutsch</a><a href="guide-fr.html" class="on">Français</a><a href="guide-en.html" class="">English</a></nav>
+<h1>Ingredients – Mode d’emploi étape par étape</h1>
+<p class="lead">Version 0.5.0 · octobre 2026 · pour Android 7.0 et plus récent</p>
+<p>Ingredients vérifie les aliments pour vous : vous scannez le code-barres, et l’app vous dit si le produit convient à votre profil (sans porc ni alcool, végétarien, vegan, allergies, santé) – et <b>pourquoi</b>, avec les sources. Gratuit, sans publicité, vos données restent sur le téléphone.</p>
+<p class="noprint"><a href="index.html?lang=fr">⬇ Page de téléchargement</a> · <a href="pdf/Ingredients-Guide-FR.pdf">Télécharger en PDF</a></p>
+<h2>Sommaire</h2>
+<ol class="toc"><li><a href="#a">Partie A — Installer l’app</a></li></ol>
+<ol class="toc"><li><a href="#s1">L’accueil</a></li><li><a href="#s2">Créer les profils (une seule fois)</a></li><li><a href="#s3">Ce que j’évite, allergies</a></li><li><a href="#s4">Ma santé et Mes règles</a></li><li><a href="#s5">Scanner un produit</a></li><li><a href="#s6">Lire le résultat</a></li><li><a href="#s7">Pourquoi ? et alternatives</a></li><li><a href="#s8">La liste des ingrédients surlignée</a></li><li><a href="#s9">Santé</a></li><li><a href="#s10">La fiche d’un ingrédient</a></li><li><a href="#s11">Comparer deux produits</a></li><li><a href="#s12">Historique et favoris</a></li><li><a href="#s13">Liste de courses</a></li><li><a href="#s14">Photographier une étiquette</a></li><li><a href="#s15">Ajouter un produit à Open Food Facts</a></li><li><a href="#s16">Signaler une erreur, mises à jour, tout effacer</a></li></ol>
+<h2 id="a">Partie A — Installer l’app</h2>
+<div class="box tip"><b>Quel APK ?</b> Sur la <a href="index.html?lang=fr">page de téléchargement</a> : <b>« Standard »</b> convient à presque tous les téléphones depuis 2017. Si le téléphone affiche « Application non installée » ou « non compatible », prenez <b>« Téléphones anciens (32 bits) »</b>. En cas de doute : <b>« Universel »</b> (plus lourd, marche partout).</div>
+<h3>Avant de commencer</h3>
+<ul>
+  <li>Être en <b>Wi-Fi</b> (le fichier fait environ <b>57 Mo</b>, « Universel » 121 Mo).</li>
+  <li>Avoir au moins <b>500 Mo</b> libres : <span class="path">Paramètres → Batterie et maintenance de l’appareil → Stockage</span>.</li>
+  <li>L’APK de la <a href="index.html?lang=fr">page de téléchargement</a>.</li>
+</ul>
+
+<h3>Méthode 1 — Directement sur le téléphone (10 minutes)</h3>
+<ol>
+  <li><b>Désactiver le Blocage automatique</b> (Samsung) :
+    <span class="path">Paramètres → Sécurité et confidentialité → Blocage automatique</span> → <b>Désactivé</b> (confirmez avec votre code).</li>
+  <li><b>Désactiver la « Protection avancée » d’Android</b>, si elle existe sur votre téléphone : tapez <i>Protection avancée</i> dans la barre de recherche des Paramètres. Si elle est activée, désactivez-la (elle interdit toute installation hors Play Store). Si la recherche ne trouve rien, passez à l’étape suivante.</li>
+  <li><b>Télécharger l’APK</b> : ouvrez le lien dans <b>Chrome</b>. Si Chrome avertit « ce type de fichier peut être dangereux », touchez <span class="btn">Télécharger quand même</span>. Attendez la fin du téléchargement.</li>
+  <li><b>Ouvrir le fichier depuis « Mes fichiers »</b> (pas depuis la notification) :
+    <span class="path">Mes fichiers → Téléchargements → le fichier .apk</span>.</li>
+  <li><b>Autoriser cette source</b> : le téléphone affiche « votre téléphone n’est pas autorisé à installer des applis inconnues provenant de cette source ». Touchez <span class="btn">Paramètres</span>, activez <span class="btn">Autoriser à partir de cette source</span>, puis revenez en arrière.<br>
+    Chemin manuel si besoin : <span class="path">Paramètres → Applications → ⋮ (en haut à droite) → Accès spécial → Installer des applis inconnues → Mes fichiers</span> (et aussi <b>Chrome</b>) → <b>Autorisé</b>.</li>
+  <li>Touchez <span class="btn">Installer</span>.</li>
+  <li><b>Si Google Play Protect bloque</b> (« Appli bloquée pour protéger votre appareil » ou « Appli non sécurisée ») : touchez <span class="btn">Plus de détails</span> → <span class="btn">Installer quand même</span>.<br>
+    S’il n’y a que <span class="btn">OK</span> : ouvrez <span class="path">Play Store → votre photo de profil (en haut à droite) → Play Protect → ⚙ (roue dentée)</span> et désactivez <b>« Analyser les applis avec Play Protect »</b>, puis recommencez l’étape 4.</li>
+  <li>Ouvrez <b>Ingredients</b>. C’est installé.</li>
+  <li><b>Remettez les protections</b> : Blocage automatique <b>activé</b>, Play Protect <b>activé</b>, et retirez l’autorisation « Installer des applis inconnues » à Mes fichiers et Chrome. L’app reste installée et continue de recevoir ses mises à jour.</li>
+</ol>
+
+<h3>Ça ne marche pas ? Trouvez votre message</h3>
+<table>
+  <tr><th>Ce que vous voyez</th><th>Cause</th><th>Solution</th></tr>
+  <tr><td>« Installation bloquée » / « bloquée par le Blocage automatique »</td><td>Blocage automatique encore actif</td><td>Étape 1. Vérifiez qu’il est bien sur <b>Désactivé</b>, puis redémarrez le téléphone.</td></tr>
+  <tr><td>« …pas autorisé à installer des applis inconnues provenant de cette source »</td><td>L’app qui ouvre le fichier n’a pas la permission</td><td>Étape 5, pour <b>Mes fichiers</b> ET <b>Chrome</b> (et WhatsApp/Gmail si le fichier vient de là).</td></tr>
+  <tr><td>« Appli bloquée par Play Protect » / « Appli non sécurisée »</td><td>Google ne connaît pas l’app</td><td>Étape 7 (« Installer quand même » ou désactiver l’analyse Play Protect le temps de l’installation).</td></tr>
+  <tr><td>« Application non installée » / « Appli non installée car le package est en conflit »</td><td>Une ancienne version d’Ingredients venant d’une autre source est installée</td><td>Désinstallez l’ancienne Ingredients (appui long sur l’icône → Désinstaller), puis réinstallez. Vos réglages seront à refaire.</td></tr>
+  <tr><td>« Application non installée » / « non compatible » sans autre détail</td><td>Mauvais type de processeur, fichier incomplet ou manque de place</td><td>Prenez <b>« Téléphones anciens (32 bits) »</b> ou <b>« Universel »</b> sur la page de téléchargement. Vérifiez que le fichier est complet (57, 48 ou 121 Mo) dans Mes fichiers ; sinon supprimez-le et retéléchargez en Wi-Fi. Libérez de l’espace.</td></tr>
+  <tr><td>« Erreur d’analyse » / « Problème lors de l’analyse du package »</td><td>Fichier abîmé pendant le téléchargement</td><td>Supprimez-le, retéléchargez (méthode 1) ou transférez-le autrement (méthode 2).</td></tr>
+  <tr><td>Rien ne se passe quand on touche le fichier</td><td>Ouvert depuis la notification ou un aperçu</td><td>Ouvrez-le depuis <b>Mes fichiers → Téléchargements</b>.</td></tr>
+  <tr><td>« Bloqué par votre administrateur » / téléphone professionnel</td><td>Téléphone géré par une entreprise (Knox, profil pro)</td><td>Impossible de contourner : utilisez un téléphone personnel.</td></tr>
+  <tr><td>Tout a été fait et ça refuse encore</td><td>Blocage Samsung/Google non identifié</td><td><b>Méthode 3</b> (câble USB + ordinateur) : elle contourne l’installateur du téléphone.</td></tr>
+</table>
+
+<h3>Méthode 2 — Recevoir le fichier autrement</h3>
+<p>Utile si le téléchargement échoue ou si le fichier est abîmé. Le fichier .apk peut être envoyé :</p>
+<ul>
+  <li>par <b>Quick Share</b> depuis un autre téléphone Samsung ou un PC Windows (le fichier arrive dans <span class="path">Mes fichiers → Téléchargements</span>) ;</li>
+  <li>par <b>câble USB</b> depuis un ordinateur : branchez le téléphone, choisissez <b>Transfert de fichiers</b> dans la notification USB, copiez le fichier dans le dossier <i>Download</i> du téléphone.</li>
+</ul>
+<p>Ensuite, reprenez la méthode 1 à partir de l’<b>étape 4</b>.</p>
+
+<h3>Méthode 3 — Câble USB + ordinateur (marche à coup sûr)</h3>
+<p>C’est la méthode qui a fonctionné quand l’installation directe était refusée. Il faut un ordinateur (Windows, Mac ou Linux) et un câble USB-C.</p>
+<p><b>Sur le téléphone :</b></p>
+<ol>
+  <li>Activez les options de développement : <span class="path">Paramètres → À propos du téléphone → Informations sur le logiciel</span> → touchez <b>7 fois</b> « Numéro de version » (entrez votre code). Le message « Mode développeur activé » apparaît.</li>
+  <li><span class="path">Paramètres → Options de développement</span> → activez <b>Débogage USB</b>.</li>
+  <li>Branchez le téléphone à l’ordinateur, <b>déverrouillez l’écran</b>. À la question « Autoriser le débogage USB ? », cochez <b>Toujours autoriser depuis cet ordinateur</b> → <span class="btn">Autoriser</span>.</li>
+</ol>
+<p><b>Sur l’ordinateur :</b></p>
+<ol>
+  <li>Téléchargez les « Android SDK Platform-Tools » officiels de Google : <a href="https://developer.android.com/tools/releases/platform-tools">developer.android.com/tools/releases/platform-tools</a>, et décompressez le dossier <i>platform-tools</i> (par exemple dans <i>C:\platform-tools</i>).</li>
+  <li>Téléchargez le fichier .apk sur l’ordinateur (par exemple dans <i>Téléchargements</i>).</li>
+  <li>Ouvrez un terminal dans le dossier <i>platform-tools</i> (Windows : dans l’Explorateur, tapez <code>cmd</code> dans la barre d’adresse puis Entrée) et tapez :</li>
+</ol>
+<pre>adb devices</pre>
+<p>Le téléphone doit apparaître avec le mot <code>device</code>. S’il y a <code>unauthorized</code>, regardez l’écran du téléphone et touchez <b>Autoriser</b>. Puis :</p>
+<pre>adb install -r "%USERPROFILE%\Downloads\ingredients.apk"</pre>
+<p>(remplacez par le vrai nom du fichier ; sur Mac/Linux : <code>./adb install -r ~/Downloads/ingredients.apk</code>). Quand <code>Success</code> s’affiche, c’est installé.</p>
+<p>Pour finir : <span class="path">Options de développement → Débogage USB</span> → <b>désactivé</b>.</p>
+
+<div class="box warn">
+<b>Sécurité :</b> n’installez des APK que depuis une source que vous connaissez (ici : la personne qui vous a envoyé le lien). Remettez toujours le Blocage automatique et Play Protect après l’installation.
+</div>
+
+<h3>Après l’installation : les mises à jour</h3>
+<ul>
+  <li>À chaque ouverture, l’app télécharge la nouvelle version en arrière-plan. Un bandeau <b>« Une nouvelle version de l’app est prête »</b> propose <span class="btn">Redémarrer pour l’installer</span>.</li>
+  <li>Tout en bas de l’accueil, le bloc <b>Version de l’app</b> montre la version et un bouton <span class="btn">Rechercher une mise à jour</span>.</li>
+  <li>Pas besoin de réinstaller d’APK, sauf si on vous le demande explicitement.</li>
+</ul>
+
+
+<h2 class="pb">Partie B — Utiliser l’app</h2>
+<section class="step" id="s1"><div><h3><span class="num">1</span>L’accueil</h3><ul>
+<li>En haut, la langue : <span class="btn">Français</span>, <span class="btn">Deutsch</span> ou <span class="btn">English</span>.</li>
+<li><b>Vérifier pour :</b> indique pour quelle personne on vérifie (s’il y a plusieurs profils). Touchez un prénom pour changer.</li>
+<li>Le grand bouton vert <span class="btn">Scanner un code-barres</span> est le plus rapide.</li>
+<li>En dessous : <b>Photographier une étiquette</b>, <b>Rechercher un produit</b>, <b>Historique et favoris</b>, <b>Mes courses</b> et <b>Mon profil</b>.</li>
+</ul></div><img src="img/fr/01-home.png" alt="L’accueil" width="390" height="780"></section>
+<section class="step" id="s2"><div><h3><span class="num">2</span>Créer les profils (une seule fois)</h3><p>Touchez <span class="btn">Mon profil</span>. Tout reste <b>uniquement sur votre téléphone</b>.</p>
+<ol>
+<li>Dans <b>Profils</b>, « Moi » existe déjà. Pour une autre personne (ex. un enfant allergique) : écrivez son prénom → <span class="btn">Ajouter un profil</span>.</li>
+<li>Le profil <b>en vert</b> est celui que vous réglez et qui sert à tous les verdicts.</li>
+<li><span class="btn">Renommer</span> change le nom ; « Supprimer le profil … » l’efface.</li>
+</ol></div><img src="img/fr/02-profiles.png" alt="Créer les profils (une seule fois)" width="390" height="780"></section>
+<section class="step" id="s3"><div><h3><span class="num">3</span>Ce que j’évite, allergies</h3><ol>
+<li><b>Ce que j’évite</b> : interrupteurs <i>Sans porc ni alcool</i>, <i>Végétarien</i>, <i>Vegan</i>. Sous chacun, ce qui est vérifié exactement.</li>
+<li><b>Allergies et intolérances</b> : touchez les 14 allergènes UE qui vous concernent (gluten, lait, arachides, fruits à coque…). Ceux choisis deviennent verts.</li>
+</ol>
+<div class="box tip">Sans profil, l’app explique les ingrédients mais ne donne pas de verdict.</div></div><img src="img/fr/03-avoid.png" alt="Ce que j’évite, allergies" width="390" height="780"></section>
+<section class="step" id="s4"><div><h3><span class="num">4</span>Ma santé et Mes règles</h3><ol>
+<li><b>Ma santé</b> : ce que votre médecin vous conseille de limiter – <i>Sucres (diabète…)</i>, <i>Sel (tension…)</i>, <i>Graisses saturées (cholestérol…)</i>, <i>Additifs à risque</i>. Un produit trop riche passe alors « À vérifier ».</li>
+<li><b>Mes règles</b> : un mot à repérer, par ex. « Palmöl ». Choisissez <i>Interdit</i> ou <i>À surveiller</i> → <span class="btn">Ajouter la règle</span>.</li>
+</ol></div><img src="img/fr/04-health.png" alt="Ma santé et Mes règles" width="390" height="780"></section>
+<section class="step" id="s5"><div><h3><span class="num">5</span>Scanner un produit</h3><ol>
+<li>Accueil → <span class="btn">Scanner un code-barres</span>.</li>
+<li>La première fois : <span class="btn">Autoriser la caméra</span>. Les images ne sont ni enregistrées ni envoyées.</li>
+<li>Placez le code-barres dans le cadre : le résultat s’ouvre tout seul.</li>
+<li>Ça ne lit pas ? Tapez les chiffres sous le code-barres → <span class="btn">Vérifier ce code</span>.</li>
+</ol></div><img src="img/fr/05-scan.png" alt="Scanner un produit" width="390" height="780"></section>
+<section class="step" id="s6"><div><h3><span class="num">6</span>Lire le résultat</h3><ol>
+<li>En haut : photo, nom et marque du produit.</li>
+<li>Trois boutons : <span class="btn">☆ Favori</span>, <span class="btn">+ Liste de courses</span>, <span class="btn">⇄ Comparer</span>.</li>
+<li><b>Le verdict</b> dans une carte de couleur : <span class="green">✓ Compatible</span>, <span class="orange">! À vérifier</span>, <span class="red">✕ Incompatible</span> ou <b>? Inconnu</b> (pas de liste d’ingrédients). Dessous, la <b>confiance</b> (élevée, moyenne, faible).</li>
+<li><span class="btn">Écouter le résultat</span> : le téléphone lit le verdict à voix haute.</li>
+</ol></div><img src="img/fr/06-result.png" alt="Lire le résultat" width="390" height="780"></section>
+<section class="step" id="s7"><div><h3><span class="num">7</span>Pourquoi ? et alternatives</h3><ol>
+<li><b>Pourquoi ?</b> donne chaque raison du verdict, avec le mot tel qu’il est écrit sur l’emballage et la source.</li>
+<li>« À vérifier » veut dire que les données ne permettent pas de trancher (ex. gélatine sans espèce indiquée) : regardez l’emballage ou demandez au fabricant.</li>
+<li><b>Des alternatives pour vous</b> : <span class="btn">Chercher des alternatives qui me conviennent</span> montre des produits de la même catégorie qui vous conviennent et font mieux sur le point qui posait problème. <b>Sans publicité</b> : aucune marque ne paie.</li>
+</ol></div><img src="img/fr/07-why.png" alt="Pourquoi ? et alternatives" width="390" height="780"></section>
+<section class="step" id="s8"><div><h3><span class="num">8</span>La liste des ingrédients surlignée</h3><ul>
+<li><span class="red">rouge</span> = vous l’évitez · <span class="orange">orange</span> = à vérifier · <span class="violet">violet</span> = santé : à surveiller.</li>
+<li><b>Souligné</b> = ingrédient expliqué : touchez-le pour en savoir plus.</li>
+<li><b>Pointillés</b> = ingrédient que l’app ne connaît pas encore.</li>
+</ul></div><img src="img/fr/08-ingredients.png" alt="La liste des ingrédients surlignée" width="390" height="780"></section>
+<section class="step" id="s9"><div><h3><span class="num">9</span>Santé</h3><ul>
+<li>Sucres, sel, graisses saturées et matières grasses <b>pour 100 g</b>, avec <i>faible / modéré / élevé</i>.</li>
+<li>Les sucres en morceaux de sucre, le sel en % du maximum conseillé par jour (OMS).</li>
+<li>Puis les ingrédients à risque avec leur niveau : <i>Risque reconnu</i>, <i>À limiter</i> ou <i>Risque débattu</i>, et leurs sources (OMS, EFSA…).</li>
+<li>Un produit sain reçoit <span class="green">Bon choix !</span></li>
+</ul></div><img src="img/fr/09-health-section.png" alt="Santé" width="390" height="780"></section>
+<section class="step" id="s10"><div><h3><span class="num">10</span>La fiche d’un ingrédient</h3><p>Après avoir touché un ingrédient souligné :</p>
+<ul>
+<li><b>Qu’est-ce que c’est ?</b> – une explication simple.</li>
+<li><b>Autres noms</b> – comment il apparaît sur d’autres étiquettes (y compris les numéros E).</li>
+<li><b>Ce que ça implique pour votre profil</b> et les effets sur la santé.</li>
+<li><b>En savoir plus</b> – liens vers Wikipédia et les sources officielles.</li>
+</ul></div><img src="img/fr/10-ingredient.png" alt="La fiche d’un ingrédient" width="390" height="780"></section>
+<section class="step" id="s11"><div><h3><span class="num">11</span>Comparer deux produits</h3><ol>
+<li>Sur un produit : <span class="btn">⇄ Comparer</span>.</li>
+<li>Scannez le 2e produit ou choisissez-le dans vos produits.</li>
+<li>Les deux sont côte à côte : verdict, sucres, sel, graisses, additifs à risque, Nutri-Score. Le meilleur est marqué <span class="green">mieux</span>. Un écart de moins de 10 % ne compte pas.</li>
+</ol></div><img src="img/fr/11-compare.png" alt="Comparer deux produits" width="390" height="780"></section>
+<section class="step" id="s12"><div><h3><span class="num">12</span>Historique et favoris</h3><ul>
+<li>Accueil → <span class="btn">Historique et favoris</span> : tous les produits consultés, lisibles même sans Internet.</li>
+<li>Filtres : <i>Tous</i> / <i>★ Favoris</i>, par verdict (<i>Recommandés, À vérifier, Non recommandés</i>) et par catégorie (produits laitiers, boissons, sucreries…).</li>
+<li>Les verdicts sont recalculés avec le profil choisi.</li>
+</ul></div><img src="img/fr/12-history.png" alt="Historique et favoris" width="390" height="780"></section>
+<section class="step" id="s13"><div><h3><span class="num">13</span>Liste de courses</h3><ol>
+<li>Sur un produit : <span class="btn">+ Liste de courses</span>.</li>
+<li>Accueil → <span class="btn">Mes courses</span> : cochez ce que vous avez acheté.</li>
+<li><span class="btn">Envoyer la liste</span> : par WhatsApp, SMS ou e-mail.</li>
+<li>Vous faites les courses pour quelqu’un ? Choisissez son profil en haut : un bandeau rouge signale ce qui ne lui convient pas.</li>
+</ol></div><img src="img/fr/13-shopping.png" alt="Liste de courses" width="390" height="780"></section>
+<section class="step noimg" id="s14"><div><h3><span class="num">14</span>Photographier une étiquette</h3><p>Quand un produit est inconnu ou sans liste d’ingrédients :</p>
+<ol>
+<li><span class="btn">Photographier une étiquette</span> (ou, dans le résultat, <span class="btn">Photographier la liste des ingrédients</span>).</li>
+<li>Photographiez le paragraphe « Zutaten » bien à plat, net et éclairé.</li>
+<li>Relisez le texte lu et corrigez les lettres fausses → <span class="btn">Analyser</span> ou <span class="btn">Utiliser pour ce produit</span> (gardé pour la prochaine fois).</li>
+</ol></div></section>
+<section class="step noimg" id="s15"><div><h3><span class="num">15</span>Ajouter un produit à Open Food Facts</h3><p>Open Food Facts est la base libre utilisée par l’app. Un produit que vous ajoutez sera ensuite reconnu <b>pour tout le monde</b>.</p>
+<ol>
+<li>Produit inconnu : <span class="btn">Ajouter ce produit à Open Food Facts</span>. Produit sans liste : <span class="btn">Compléter sur Open Food Facts</span>.</li>
+<li>Une seule fois : créez un compte gratuit sur <a href="https://world.openfoodfacts.org">openfoodfacts.org</a> et entrez dans l’app votre <b>nom d’utilisateur</b> (pas l’e-mail) et votre mot de passe. Ils restent chiffrés sur le téléphone.</li>
+<li>Prenez les photos (face avant, ingrédients, valeurs nutritionnelles), vérifiez le texte, acceptez la licence libre → <span class="btn">Envoyer à Open Food Facts</span>.</li>
+</ol></div></section>
+<section class="step noimg" id="s16"><div><h3><span class="num">16</span>Signaler une erreur, mises à jour, tout effacer</h3><ul>
+<li><span class="btn">Signaler une erreur</span> (en bas de chaque résultat) : votre messagerie s’ouvre avec un e-mail prêt. Votre profil n’est jamais envoyé.</li>
+<li>Les <b>mises à jour</b> arrivent toutes seules : quand « Une nouvelle version de l’app est prête » apparaît, touchez <span class="btn">Redémarrer</span>.</li>
+<li><span class="path">Mon profil → Mes données → Tout supprimer</span> : profils, historique, favoris, liste de courses et compte sont effacés du téléphone.</li>
+</ul></div></section>
+
+<h2>Partie C — À savoir</h2>
+<ul>
+<li>L’app <b>ne remplace ni l’emballage, ni votre médecin, ni une autorité religieuse</b>. Elle ne certifie rien. En cas d’allergie grave, lisez toujours l’étiquette.</li>
+<li>Quand elle ne sait pas, elle le dit (« Inconnu », confiance faible).</li>
+<li>Aucune publicité, aucun compte obligatoire. Données produits : Open Food Facts (licence ODbL). Pour lire une photo, l’image est envoyée au service OCR.space ; votre profil, jamais.</li>
+<li>Questions ou idées ? Écrivez à <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
+</ul>
+<footer>Ingredients 0.5.0 · Open Food Facts (ODbL)</footer>
+</div></body></html>
