@@ -13,7 +13,7 @@ header.top span { color:var(--muted); font-weight:600; font-size:15px; }
 nav.langs { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
 nav.langs a { text-decoration:none; color:var(--text); border:1px solid var(--border); background:var(--card); border-radius:999px; padding:6px 14px; font-weight:700; font-size:15px; }
 nav.langs a.on { background:var(--primary); border-color:var(--primary); color:#fff; }
-h1 { font-size:30px; line-height:1.2; margin:18px 0 6px; font-weight:800; }
+h1 { font-size:30px; line-height:1.2; margin:18px 0 6px; font-weight:800; letter-spacing:-0.02em; }
 h2 { font-size:24px; margin:34px 0 10px; color:var(--primary); font-weight:800; page-break-after:avoid; }
 h3 { font-size:19px; margin:20px 0 6px; font-weight:800; page-break-after:avoid; }
 p.lead { color:var(--muted); font-size:18px; margin:0 0 12px; }
@@ -40,6 +40,7 @@ a { color:var(--primary); font-weight:700; }
 .dl a.big { display:flex; align-items:center; justify-content:space-between; gap:12px; text-decoration:none; background:var(--primary); color:#fff; border-radius:18px; padding:16px 20px; font-size:19px; font-weight:800; }
 .dl a.big > span:last-child { white-space:nowrap; }
 .dl a.big small { display:block; font-weight:600; font-size:14px; opacity:.9; }
+.dl a.big:active { transform:scale(0.98); opacity:.85; }
 .dl a.alt { background:var(--card); color:var(--text); border:1px solid var(--border); }
 .dl a.alt small { color:var(--muted); }
 .toc { columns:2; } .toc li { break-inside:avoid; }
@@ -51,7 +52,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <header class="top"><img src="img/icon.png" alt=""><div><b>Ingredients</b><span>Wissen, was drin ist.</span></div></header>
 <nav class="langs"><a href="anleitung.html" class="on">Deutsch</a><a href="guide-fr.html" class="">Français</a><a href="guide-en.html" class="">English</a></nav>
 <h1>Ingredients – Anleitung Schritt für Schritt</h1>
-<p class="lead">Version 0.5.0 · Oktober 2026 · für Android 7.0 und neuer</p>
+<p class="lead">Version 0.6.0 · Oktober 2026 · für Android 7.0 und neuer</p>
 <p>Ingredients prüft Lebensmittel für Sie: Sie scannen den Barcode, und die App sagt Ihnen, ob das Produkt zu Ihrem Profil passt (ohne Schwein und Alkohol, vegetarisch, vegan, Allergien, Gesundheit) – und <b>warum</b>, mit Quellen. Kostenlos, ohne Werbung, Ihre Daten bleiben auf dem Handy.</p>
 <p class="noprint"><a href="index.html">⬇ Zur Download-Seite</a> · <a href="pdf/Ingredients-Anleitung-DE.pdf">Als PDF herunterladen</a></p>
 <h2>Inhalt</h2>
@@ -139,7 +140,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 
 <h2 class="pb">Teil B — Die App benutzen</h2>
 <section class="step" id="s1"><div><h3><span class="num">1</span>Die Startseite</h3><ul>
-<li>Oben wählen Sie die Sprache: <span class="btn">Français</span>, <span class="btn">Deutsch</span> oder <span class="btn">English</span>.</li>
+<li>Die Sprache (<span class="btn">Français</span>, <span class="btn">Deutsch</span> oder <span class="btn">English</span>) stellen Sie unter <span class="path">Mein Profil → Sprache</span> ein. Beim ersten Start nimmt die App die Sprache des Handys.</li>
 <li><b>Prüfen für:</b> zeigt, für welche Person geprüft wird (wenn es mehrere Profile gibt). Tippen Sie auf einen Namen, um zu wechseln.</li>
 <li>Der große grüne Knopf <span class="btn">Barcode scannen</span> ist der schnellste Weg.</li>
 <li>Darunter: <b>Etikett fotografieren</b>, <b>Produkt suchen</b>, <b>Verlauf und Favoriten</b>, <b>Einkaufsliste</b> und <b>Mein Profil</b>.</li>
@@ -148,7 +149,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <ol>
 <li>Unter <b>Profile</b> gibt es schon „Ich“. Für eine weitere Person (z. B. ein Kind mit Allergie): Vornamen eintippen → <span class="btn">Profil hinzufügen</span>.</li>
 <li>Das <b>grün markierte</b> Profil ist das, das Sie gerade einstellen und das für alle Urteile gilt.</li>
-<li><span class="btn">Umbenennen</span> ändert den Namen; „Profil … löschen“ entfernt es.</li>
+<li><span class="btn">Umbenennen</span> ändert den Namen; „Profil … löschen“ entfernt es (nach einer Rückfrage).</li>
 </ol></div><img src="img/de/02-profiles.png" alt="Profile anlegen (einmalig)" width="390" height="780"></section>
 <section class="step" id="s3"><div><h3><span class="num">3</span>Was ich meide, Allergien</h3><ol>
 <li><b>Was ich meide</b>: Schalter <i>Ohne Schwein und Alkohol</i>, <i>Vegetarisch</i>, <i>Vegan</i>. Unter jedem Schalter steht genau, was geprüft wird.</li>
@@ -157,12 +158,13 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <div class="box tip">Ohne Profil erklärt die App die Zutaten, gibt aber kein Urteil ab.</div></div><img src="img/de/03-avoid.png" alt="Was ich meide, Allergien" width="390" height="780"></section>
 <section class="step" id="s4"><div><h3><span class="num">4</span>Meine Gesundheit und Meine Regeln</h3><ol>
 <li><b>Meine Gesundheit</b>: was Ihr Arzt Ihnen rät einzuschränken – <i>Zucker (Diabetes …)</i>, <i>Salz (Blutdruck …)</i>, <i>Gesättigte Fettsäuren (Cholesterin …)</i>, <i>Bedenkliche Zusatzstoffe</i>. Ein Produkt mit hohem Gehalt wird dann „Prüfen“.</li>
-<li><b>Meine Regeln</b>: ein eigenes Wort, nach dem gesucht wird, z. B. „Palmöl“. Wählen Sie <i>Verboten</i> oder <i>Beobachten</i> → <span class="btn">Regel hinzufügen</span>.</li>
+<li><b>Meine Regeln</b>: ein eigenes Wort, nach dem gesucht wird, z. B. „Palmöl“. Wählen Sie <i>Verboten</i> oder <i>Beobachten</i> → <span class="btn">Regel hinzufügen</span>. Aus Versehen gelöscht? Unten erscheint kurz <span class="btn">Rückgängig</span>.</li>
 </ol></div><img src="img/de/04-health.png" alt="Meine Gesundheit und Meine Regeln" width="390" height="780"></section>
 <section class="step" id="s5"><div><h3><span class="num">5</span>Ein Produkt scannen</h3><ol>
 <li>Startseite → <span class="btn">Barcode scannen</span>.</li>
 <li>Beim ersten Mal: <span class="btn">Kamera erlauben</span>. Die Bilder werden weder gespeichert noch gesendet.</li>
 <li>Halten Sie den Barcode in den Rahmen – das Ergebnis öffnet sich von selbst.</li>
+<li>Ist der Code gelesen, wird der Rahmen <b>grün</b> und das Handy <b>vibriert</b> kurz.</li>
 <li>Kein Erfolg? Tippen Sie die Ziffern unter dem Barcode ein → <span class="btn">Diesen Code prüfen</span>.</li>
 </ol></div><img src="img/de/05-scan.png" alt="Ein Produkt scannen" width="390" height="780"></section>
 <section class="step" id="s6"><div><h3><span class="num">6</span>Das Ergebnis lesen</h3><ol>
@@ -172,9 +174,9 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li><span class="btn">Ergebnis vorlesen</span>: Das Handy liest das Urteil laut vor.</li>
 </ol></div><img src="img/de/06-result.png" alt="Das Ergebnis lesen" width="390" height="780"></section>
 <section class="step" id="s7"><div><h3><span class="num">7</span>Warum? und Alternativen</h3><ol>
-<li><b>Warum?</b> listet jeden Grund für das Urteil auf, mit dem Wort, wie es auf der Verpackung steht, und der Quelle.</li>
+<li><b>Warum?</b> listet jeden Grund für das Urteil auf, mit dem Wort, wie es auf der Verpackung steht, und der Quelle. Haben Sie Allergien, folgen gleich danach die <b>angegebenen Allergene</b>. Ganz unten öffnet <span class="btn">Siegel und Quellen +</span> die Details.</li>
 <li>„Prüfen“ heißt: Die Daten erlauben keine sichere Antwort (z. B. Gelatine ohne Angabe der Tierart). Schauen Sie auf die Verpackung oder fragen Sie den Hersteller.</li>
-<li><b>Alternativen für Sie</b>: <span class="btn">Passende Alternativen suchen</span> zeigt Produkte derselben Kategorie, die zu Ihrem Profil passen und beim Problempunkt besser sind. <b>Ohne Werbung</b>: Keine Marke bezahlt dafür.</li>
+<li><b>Alternativen für Sie</b>: <span class="btn">Passende Alternativen suchen</span> zeigt Produkte derselben Kategorie, die zu Ihrem Profil passen und beim Problempunkt besser sind. <b>Ohne Werbung</b>: Keine Marke bezahlt dafür. Haben Sie Verbote (Allergie, Schwein …), zeigt die App nur Produkte, deren Zutatenliste sie geprüft hat; ist Open Food Facts überlastet, in einer Minute erneut versuchen.</li>
 </ol></div><img src="img/de/07-why.png" alt="Warum? und Alternativen" width="390" height="780"></section>
 <section class="step" id="s8"><div><h3><span class="num">8</span>Die hervorgehobene Zutatenliste</h3><ul>
 <li><span class="red">rot</span> = Sie meiden es · <span class="orange">orange</span> = prüfen · <span class="violet">violett</span> = Gesundheit: beobachten.</li>
@@ -206,7 +208,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 </ul></div><img src="img/de/12-history.png" alt="Verlauf und Favoriten" width="390" height="780"></section>
 <section class="step" id="s13"><div><h3><span class="num">13</span>Einkaufsliste</h3><ol>
 <li>Bei einem Produkt: <span class="btn">+ Einkaufsliste</span>.</li>
-<li>Startseite → <span class="btn">Einkaufsliste</span>: Gekauftes abhaken.</li>
+<li>Startseite → <span class="btn">Einkaufsliste</span>: Gekauftes abhaken. <span class="btn">Gekaufte Artikel entfernen</span> lässt sich kurz rückgängig machen.</li>
 <li><span class="btn">Liste senden</span>: per WhatsApp, SMS oder E-Mail.</li>
 <li>Für jemand anderen einkaufen? Oben dessen Profil wählen: Ein roter Hinweis zeigt Artikel, die nicht passen.</li>
 </ol></div><img src="img/de/13-shopping.png" alt="Einkaufsliste" width="390" height="780"></section>
@@ -235,5 +237,5 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Keine Werbung, kein Pflichtkonto. Produktdaten: Open Food Facts (Lizenz ODbL). Zum Lesen von Fotos wird das Bild an den Dienst OCR.space gesendet; Ihr Profil nie.</li>
 <li>Fragen oder Ideen? Schreiben Sie an <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
 </ul>
-<footer>Ingredients 0.5.0 · Open Food Facts (ODbL)</footer>
+<footer>Ingredients 0.6.0 · Open Food Facts (ODbL)</footer>
 </div></body></html>

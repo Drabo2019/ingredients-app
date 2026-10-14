@@ -13,7 +13,7 @@ header.top span { color:var(--muted); font-weight:600; font-size:15px; }
 nav.langs { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
 nav.langs a { text-decoration:none; color:var(--text); border:1px solid var(--border); background:var(--card); border-radius:999px; padding:6px 14px; font-weight:700; font-size:15px; }
 nav.langs a.on { background:var(--primary); border-color:var(--primary); color:#fff; }
-h1 { font-size:30px; line-height:1.2; margin:18px 0 6px; font-weight:800; }
+h1 { font-size:30px; line-height:1.2; margin:18px 0 6px; font-weight:800; letter-spacing:-0.02em; }
 h2 { font-size:24px; margin:34px 0 10px; color:var(--primary); font-weight:800; page-break-after:avoid; }
 h3 { font-size:19px; margin:20px 0 6px; font-weight:800; page-break-after:avoid; }
 p.lead { color:var(--muted); font-size:18px; margin:0 0 12px; }
@@ -40,6 +40,7 @@ a { color:var(--primary); font-weight:700; }
 .dl a.big { display:flex; align-items:center; justify-content:space-between; gap:12px; text-decoration:none; background:var(--primary); color:#fff; border-radius:18px; padding:16px 20px; font-size:19px; font-weight:800; }
 .dl a.big > span:last-child { white-space:nowrap; }
 .dl a.big small { display:block; font-weight:600; font-size:14px; opacity:.9; }
+.dl a.big:active { transform:scale(0.98); opacity:.85; }
 .dl a.alt { background:var(--card); color:var(--text); border:1px solid var(--border); }
 .dl a.alt small { color:var(--muted); }
 .toc { columns:2; } .toc li { break-inside:avoid; }
@@ -51,7 +52,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <header class="top"><img src="img/icon.png" alt=""><div><b>Ingredients</b><span>Know what’s inside.</span></div></header>
 <nav class="langs"><a href="anleitung.html" class="">Deutsch</a><a href="guide-fr.html" class="">Français</a><a href="guide-en.html" class="on">English</a></nav>
 <h1>Ingredients – Step-by-step guide</h1>
-<p class="lead">Version 0.5.0 · October 2026 · for Android 7.0 and newer</p>
+<p class="lead">Version 0.6.0 · October 2026 · for Android 7.0 and newer</p>
 <p>Ingredients checks food for you: scan the barcode and the app tells you whether the product suits your profile (no pork or alcohol, vegetarian, vegan, allergies, health) – and <b>why</b>, with sources. Free, no ads, your data stays on your phone.</p>
 <p class="noprint"><a href="index.html?lang=en">⬇ Download page</a> · <a href="pdf/Ingredients-Guide-EN.pdf">Download as PDF</a></p>
 <h2>Contents</h2>
@@ -138,7 +139,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 
 <h2 class="pb">Part B — Use the app</h2>
 <section class="step" id="s1"><div><h3><span class="num">1</span>The home screen</h3><ul>
-<li>At the top, the language: <span class="btn">Français</span>, <span class="btn">Deutsch</span> or <span class="btn">English</span>.</li>
+<li>The language (<span class="btn">Français</span>, <span class="btn">Deutsch</span> or <span class="btn">English</span>) is set in <span class="path">My profile → Language</span>. On first launch, the app uses the phone’s language.</li>
 <li><b>Check for:</b> shows whose profile is used (when there are several). Tap a name to switch.</li>
 <li>The big green <span class="btn">Scan a barcode</span> button is the quickest way.</li>
 <li>Below: <b>Photograph a label</b>, <b>Search for a product</b>, <b>History and favourites</b>, <b>Shopping list</b> and <b>My profile</b>.</li>
@@ -147,7 +148,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <ol>
 <li>Under <b>Profiles</b>, “Me” already exists. For another person (e.g. a child with an allergy): type a first name → <span class="btn">Add a profile</span>.</li>
 <li>The profile <b>in green</b> is the one you are setting up, and the one used for every verdict.</li>
-<li><span class="btn">Rename</span> changes the name; “Delete the profile …” removes it.</li>
+<li><span class="btn">Rename</span> changes the name; “Delete the profile …” removes it (after a confirmation).</li>
 </ol></div><img src="img/en/02-profiles.png" alt="Create the profiles (once)" width="390" height="780"></section>
 <section class="step" id="s3"><div><h3><span class="num">3</span>What I avoid, allergies</h3><ol>
 <li><b>What I avoid</b>: switches <i>No pork, no alcohol</i>, <i>Vegetarian</i>, <i>Vegan</i>. Under each one, exactly what is checked.</li>
@@ -156,12 +157,13 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <div class="box tip">Without a profile, the app explains the ingredients but gives no verdict.</div></div><img src="img/en/03-avoid.png" alt="What I avoid, allergies" width="390" height="780"></section>
 <section class="step" id="s4"><div><h3><span class="num">4</span>My health and My rules</h3><ol>
 <li><b>My health</b>: what your doctor advises you to limit – <i>Sugars (diabetes…)</i>, <i>Salt (blood pressure…)</i>, <i>Saturated fat (cholesterol…)</i>, <i>Risky additives</i>. A product high in it then becomes “Check”.</li>
-<li><b>My rules</b>: your own word to look for, e.g. “Palmöl” (palm oil). Choose <i>Forbidden</i> or <i>Watch</i> → <span class="btn">Add the rule</span>.</li>
+<li><b>My rules</b>: your own word to look for, e.g. “Palmöl” (palm oil). Choose <i>Forbidden</i> or <i>Watch</i> → <span class="btn">Add the rule</span>. Deleted by mistake? An <span class="btn">Undo</span> bar appears at the bottom for a few seconds.</li>
 </ol></div><img src="img/en/04-health.png" alt="My health and My rules" width="390" height="780"></section>
 <section class="step" id="s5"><div><h3><span class="num">5</span>Scan a product</h3><ol>
 <li>Home → <span class="btn">Scan a barcode</span>.</li>
 <li>The first time: <span class="btn">Allow the camera</span>. Images are neither saved nor sent.</li>
 <li>Hold the barcode inside the frame: the result opens by itself.</li>
+<li>When the code is read, the frame turns <b>green</b> and the phone <b>vibrates</b> briefly.</li>
 <li>Not reading? Type the digits under the barcode → <span class="btn">Check this code</span>.</li>
 </ol></div><img src="img/en/05-scan.png" alt="Scan a product" width="390" height="780"></section>
 <section class="step" id="s6"><div><h3><span class="num">6</span>Read the result</h3><ol>
@@ -171,9 +173,9 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li><span class="btn">Read the result aloud</span>: the phone reads the verdict out loud.</li>
 </ol></div><img src="img/en/06-result.png" alt="Read the result" width="390" height="780"></section>
 <section class="step" id="s7"><div><h3><span class="num">7</span>Why? and alternatives</h3><ol>
-<li><b>Why?</b> lists every reason for the verdict, with the word as written on the pack and its source.</li>
+<li><b>Why?</b> lists every reason for the verdict, with the word as written on the pack and its source. If you have allergies, the <b>declared allergens</b> come right after. At the very bottom, <span class="btn">Labels and sources +</span> opens the details.</li>
 <li>“Check” means the data does not allow a sure answer (e.g. gelatine without the animal stated): look at the pack or ask the manufacturer.</li>
-<li><b>Alternatives for you</b>: <span class="btn">Find alternatives that suit me</span> shows products of the same category that suit you and are better on the problem point. <b>No advertising</b>: no brand pays.</li>
+<li><b>Alternatives for you</b>: <span class="btn">Find alternatives that suit me</span> shows products of the same category that suit you and are better on the problem point. <b>No advertising</b>: no brand pays. If your profile has forbidden items (allergy, pork…), the app only proposes products whose list it has checked; if Open Food Facts is overloaded, try again in a minute.</li>
 </ol></div><img src="img/en/07-why.png" alt="Why? and alternatives" width="390" height="780"></section>
 <section class="step" id="s8"><div><h3><span class="num">8</span>The highlighted ingredient list</h3><ul>
 <li><span class="red">red</span> = you avoid it · <span class="orange">orange</span> = to check · <span class="violet">purple</span> = health: watch.</li>
@@ -205,7 +207,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 </ul></div><img src="img/en/12-history.png" alt="History and favourites" width="390" height="780"></section>
 <section class="step" id="s13"><div><h3><span class="num">13</span>Shopping list</h3><ol>
 <li>On a product: <span class="btn">+ Shopping list</span>.</li>
-<li>Home → <span class="btn">Shopping list</span>: tick what you bought.</li>
+<li>Home → <span class="btn">Shopping list</span>: tick what you bought. <span class="btn">Remove bought items</span> can be undone for a few seconds.</li>
 <li><span class="btn">Send the list</span>: by WhatsApp, SMS or e-mail.</li>
 <li>Shopping for someone else? Choose their profile at the top: a red banner flags items that don’t suit them.</li>
 </ol></div><img src="img/en/13-shopping.png" alt="Shopping list" width="390" height="780"></section>
@@ -234,5 +236,5 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>No ads, no required account. Product data: Open Food Facts (ODbL licence). To read a photo, the image is sent to the OCR.space service; your profile, never.</li>
 <li>Questions or ideas? Write to <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
 </ul>
-<footer>Ingredients 0.5.0 · Open Food Facts (ODbL)</footer>
+<footer>Ingredients 0.6.0 · Open Food Facts (ODbL)</footer>
 </div></body></html>
