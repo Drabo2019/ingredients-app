@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingredients – Anleitung (Version 2)</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
+:root { --bg:#F6F1E7; --card:#FFFDF8; --text:#1D2420; --muted:#5C625D; --border:#E4DCCB; --primary:#1F5F4A; --soft:#DCEBE2;
+  --ok:#11643A; --okbg:#E1F2E6; --warn:#7A4B00; --warnbg:#FBEACB; --bad:#A1231B; --badbg:#FADFDB; --vio:#6A2C91; --viobg:#F1E5F8; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:'Nunito', 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.55; }
+.wrap { max-width:900px; margin:0 auto; padding:16px; }
+header.top { display:flex; align-items:center; gap:12px; padding:8px 0 4px; }
+header.top img { width:52px; height:52px; border-radius:14px; }
+header.top b { font-size:22px; font-weight:800; display:block; }
+header.top span { color:var(--muted); font-weight:600; font-size:15px; }
+nav.langs { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
+nav.langs a { text-decoration:none; color:var(--text); border:1px solid var(--border); background:var(--card); border-radius:999px; padding:6px 14px; font-weight:700; font-size:15px; }
+nav.langs a.on { background:var(--primary); border-color:var(--primary); color:#fff; }
+h1 { font-size:30px; line-height:1.2; margin:18px 0 6px; font-weight:800; letter-spacing:-0.02em; }
+h2 { font-size:24px; margin:34px 0 10px; color:var(--primary); font-weight:800; page-break-after:avoid; }
+h3 { font-size:19px; margin:20px 0 6px; font-weight:800; page-break-after:avoid; }
+p.lead { color:var(--muted); font-size:18px; margin:0 0 12px; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:16px 18px; margin:12px 0; box-shadow:0 2px 10px rgba(52,44,25,.06); page-break-inside:avoid; }
+.box { border-radius:14px; padding:12px 16px; margin:12px 0; border:1px solid var(--border); page-break-inside:avoid; }
+.tip { background:var(--soft); border-color:var(--soft); } .warn { background:var(--warnbg); border-color:#e9cf9a; } .stop { background:var(--badbg); }
+.step { display:grid; grid-template-columns:1fr 250px; gap:22px; align-items:start; background:var(--card); border:1px solid var(--border); border-radius:20px; padding:18px; margin:16px 0; page-break-inside:avoid; }
+.step.noimg { grid-template-columns:1fr; }
+.step img { width:250px; height:auto; border-radius:22px; border:6px solid #1D2420; box-shadow:0 4px 16px rgba(0,0,0,.15); background:#fff; }
+.num { display:inline-flex; width:34px; height:34px; border-radius:50%; background:var(--primary); color:#fff; font-weight:800; align-items:center; justify-content:center; margin-right:8px; flex:none; }
+.step h3 { display:flex; align-items:center; margin-top:0; }
+.btn, .path { font-weight:700; background:#EFE8DA; padding:1px 7px; border-radius:6px; white-space:nowrap; }
+.path { white-space:normal; }
+.red { background:var(--badbg); color:var(--bad); font-weight:800; padding:0 5px; border-radius:4px; }
+.orange { background:var(--warnbg); color:var(--warn); font-weight:800; padding:0 5px; border-radius:4px; }
+.violet { background:var(--viobg); color:var(--vio); font-weight:800; padding:0 5px; border-radius:4px; }
+.green { background:var(--okbg); color:var(--ok); font-weight:800; padding:0 5px; border-radius:4px; }
+ol, ul { padding-left:22px; } li { margin:5px 0; }
+table { border-collapse:collapse; width:100%; font-size:15px; background:var(--card); }
+th, td { border:1px solid var(--border); padding:7px 9px; text-align:left; vertical-align:top; } th { background:#EFE8DA; }
+pre { background:#1D2420; color:#EEF2EC; padding:10px 12px; border-radius:10px; white-space:pre-wrap; word-break:break-all; }
+a { color:var(--primary); font-weight:700; }
+.dl { display:grid; gap:12px; margin:14px 0; }
+.dl a.big { display:flex; align-items:center; justify-content:space-between; gap:12px; text-decoration:none; background:var(--primary); color:#fff; border-radius:18px; padding:16px 20px; font-size:19px; font-weight:800; }
+.dl a.big > span:last-child { white-space:nowrap; }
+.dl a.big small { display:block; font-weight:600; font-size:14px; opacity:.9; }
+.dl a.big:active { transform:scale(0.98); opacity:.85; }
+.dl a.alt { background:var(--card); color:var(--text); border:1px solid var(--border); }
+.dl a.alt small { color:var(--muted); }
+.toc { columns:2; } .toc li { break-inside:avoid; }
+footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
+@media (max-width:640px) { .step { grid-template-columns:1fr; } .step img { width:100%; max-width:300px; justify-self:center; } .toc { columns:1; } h1 { font-size:26px; } }
+@media print { body { background:#fff; font-size:12pt; } .wrap { max-width:none; } nav.langs, .noprint { display:none; } .step { grid-template-columns:1fr 200px; } .step img { width:200px; } h2 { page-break-before:auto; } .pb { page-break-before:always; } }
+</style></head>
+<body><div class="wrap">
+<header class="top"><img src="img/icon.png" alt=""><div><b>Ingredients</b><span>Wissen, was drin ist.</span></div></header>
+<nav class="langs"><a href="anleitung-v2.html" class="on">Deutsch</a><a href="guide-fr-v2.html" class="">Français</a><a href="guide-en-v2.html" class="">English</a></nav>
+<h1>Ingredients – Anleitung (Version 2)</h1>
+<p class="lead">Oktober 2026 · neue Aufteilung mit Leiste unten · für Android 7.0 und neuer</p>
+<p>Ingredients prüft Lebensmittel für Sie: Sie scannen den Barcode, und die App sagt Ihnen, ob das Produkt zu Ihrem Profil passt (ohne Schwein und Alkohol, vegetarisch, vegan, Allergien, Gesundheit) – und <b>warum</b>, mit Quellen. Kostenlos, ohne Werbung, Ihre Daten bleiben auf dem Handy.</p>
+<p class="noprint"><a href="index.html">⬇ Zur Download-Seite</a> · <a href="pdf/Ingredients-Anleitung-v2-DE.pdf">Als PDF herunterladen</a></p>
+<div class="box tip noprint"><a href="anleitung.html">Frühere Anleitung (Version 1, Startseite mit Kacheln)</a></div>
+<h2>Inhalt</h2>
+<ol class="toc"><li><a href="#a">Teil A — App installieren</a></li></ol>
+<ol class="toc"><li><a href="#s1">Die Startseite und die Leiste unten</a></li><li><a href="#s2">Einstellungen (Zahnrad)</a></li><li><a href="#s3">Profile anlegen (einmalig)</a></li><li><a href="#s4">Was ich meide, Allergien</a></li><li><a href="#s5">Meine Gesundheit und Meine Regeln</a></li><li><a href="#s6">Ein Produkt scannen</a></li><li><a href="#s7">Das Ergebnis lesen</a></li><li><a href="#s8">Warum? und Alternativen</a></li><li><a href="#s9">Die hervorgehobene Zutatenliste</a></li><li><a href="#s10">Gesundheit</a></li><li><a href="#s11">Die Karte einer Zutat</a></li><li><a href="#s12">Zwei Produkte vergleichen</a></li><li><a href="#s13">Verlauf und Favoriten</a></li><li><a href="#s14">Einkäufe: die Liste</a></li><li><a href="#s15">Einkäufe: die Kassenbons (neu)</a></li><li><a href="#s16">Einen Kassenbon hinzufügen</a></li><li><a href="#s17">Einen Kassenbon ansehen</a></li><li><a href="#s18">Ein Produkt suchen (Lupe)</a></li><li><a href="#s19">Etikett fotografieren, Produkt hinzufügen</a></li><li><a href="#s20">Fehler melden, Updates, alles löschen</a></li></ol>
+<h2 id="a">Teil A — App installieren</h2>
+<div class="box tip"><b>Welche APK?</b> Auf der <a href="index.html">Download-Seite</a>: <b>„Standard“</b> passt für fast alle Handys seit 2017. Meldet das Handy „App nicht installiert“ oder „nicht kompatibel“, nehmen Sie <b>„Ältere Handys (32-Bit)“</b>. Im Zweifel: <b>„Universal“</b> (größer, passt überall).</div>
+<h3>Bevor Sie anfangen</h3>
+<ul>
+  <li>Im <b>WLAN</b> sein (die Datei ist etwa <b>57 MB</b> groß, „Universal“ 121 MB).</li>
+  <li>Mindestens <b>500 MB</b> frei: <span class="path">Einstellungen → Akku und Gerätewartung → Speicher</span>.</li>
+  <li>Die APK von der <a href="index.html">Download-Seite</a>.</li>
+</ul>
+
+<h3>Methode 1 — Direkt auf dem Handy (10 Minuten)</h3>
+<ol>
+  <li><b>Automatische Sperre ausschalten</b> (Samsung):
+    <span class="path">Einstellungen → Sicherheit und Datenschutz → Automatische Sperre</span> → <b>Aus</b> (mit Ihrer PIN bestätigen).</li>
+  <li><b>„Erweiterten Schutz“ von Android ausschalten</b>, falls vorhanden: Geben Sie <i>Erweiterter Schutz</i> in die Suche der Einstellungen ein. Ist er aktiv, schalten Sie ihn aus (er verbietet jede Installation außerhalb des Play Stores). Findet die Suche nichts, weiter mit dem nächsten Schritt.</li>
+  <li><b>APK herunterladen</b>: Öffnen Sie den Link in <b>Chrome</b>. Warnt Chrome „Diese Datei kann schädlich sein“, tippen Sie auf <span class="btn">Trotzdem herunterladen</span>. Warten Sie, bis der Download fertig ist.</li>
+  <li><b>Datei über „Eigene Dateien“ öffnen</b> (nicht über die Benachrichtigung):
+    <span class="path">Eigene Dateien → Downloads → die .apk-Datei</span>.</li>
+  <li><b>Diese Quelle erlauben</b>: Das Handy meldet „Ihr Telefon darf aus Sicherheitsgründen keine unbekannten Apps aus dieser Quelle installieren“. Tippen Sie auf <span class="btn">Einstellungen</span>, aktivieren Sie <span class="btn">Von dieser Quelle erlauben</span> und gehen Sie zurück.<br>
+    Manueller Weg, falls nötig: <span class="path">Einstellungen → Apps → ⋮ (oben rechts) → Spezieller Zugriff → Unbekannte Apps installieren → Eigene Dateien</span> (und auch <b>Chrome</b>) → <b>Zulässig</b>.</li>
+  <li>Tippen Sie auf <span class="btn">Installieren</span>.</li>
+  <li><b>Wenn Google Play Protect blockiert</b> („App zum Schutz Ihres Geräts blockiert“ oder „Unsichere App blockiert“): Tippen Sie auf <span class="btn">Weitere Details</span> → <span class="btn">Trotzdem installieren</span>.<br>
+    Gibt es nur <span class="btn">OK</span>: Öffnen Sie <span class="path">Play Store → Ihr Profilbild (oben rechts) → Play Protect → ⚙ (Zahnrad)</span> und schalten Sie <b>„Apps mit Play Protect scannen“</b> aus, dann ab Schritt 4 wiederholen.</li>
+  <li>Öffnen Sie <b>Ingredients</b>. Fertig.</li>
+  <li><b>Schutz wieder einschalten</b>: Automatische Sperre <b>an</b>, Play Protect <b>an</b>, und die Berechtigung „Unbekannte Apps installieren“ für Eigene Dateien und Chrome wieder entziehen. Die App bleibt installiert und bekommt weiter Updates.</li>
+</ol>
+
+<h3>Klappt es nicht? Suchen Sie Ihre Meldung</h3>
+<table>
+  <tr><th>Was Sie sehen</th><th>Ursache</th><th>Lösung</th></tr>
+  <tr><td>„Installation blockiert“ / „durch Automatische Sperre blockiert“</td><td>Automatische Sperre noch aktiv</td><td>Schritt 1. Prüfen, ob sie wirklich <b>Aus</b> ist, dann Handy neu starten.</td></tr>
+  <tr><td>„…darf keine unbekannten Apps aus dieser Quelle installieren“</td><td>Die App, die die Datei öffnet, hat keine Erlaubnis</td><td>Schritt 5, für <b>Eigene Dateien</b> UND <b>Chrome</b> (und WhatsApp/Gmail, wenn die Datei von dort kommt).</td></tr>
+  <tr><td>„Von Play Protect blockiert“ / „Unsichere App blockiert“</td><td>Google kennt die App nicht</td><td>Schritt 7 („Trotzdem installieren“ oder Play-Protect-Scan für die Installation ausschalten).</td></tr>
+  <tr><td>„App nicht installiert“ / „…da das Paket mit einem vorhandenen Paket in Konflikt steht“</td><td>Eine alte Ingredients-Version aus einer anderen Quelle ist installiert</td><td>Alte Ingredients deinstallieren (lange auf das Symbol drücken → Deinstallieren), dann neu installieren. Einstellungen müssen neu gesetzt werden.</td></tr>
+  <tr><td>„App nicht installiert“ / „nicht kompatibel“ ohne weitere Angabe</td><td>Falscher Prozessortyp, Datei unvollständig oder zu wenig Speicher</td><td>Auf der Download-Seite <b>„Ältere Handys (32-Bit)“</b> oder <b>„Universal“</b> nehmen. In Eigene Dateien prüfen, ob die Datei vollständig ist (57, 48 oder 121 MB); sonst löschen und im WLAN neu herunterladen. Speicher freigeben.</td></tr>
+  <tr><td>„Fehler beim Parsen“ / „Problem beim Parsen des Pakets“</td><td>Datei beim Download beschädigt</td><td>Löschen und neu herunterladen (Methode 1) oder anders übertragen (Methode 2).</td></tr>
+  <tr><td>Beim Antippen der Datei passiert nichts</td><td>Über Benachrichtigung oder Vorschau geöffnet</td><td>Über <b>Eigene Dateien → Downloads</b> öffnen.</td></tr>
+  <tr><td>„Von Ihrem Administrator blockiert“ / Diensthandy</td><td>Handy wird von einer Firma verwaltet (Knox, Arbeitsprofil)</td><td>Nicht umgehbar: ein privates Handy verwenden.</td></tr>
+  <tr><td>Alles gemacht und es klappt trotzdem nicht</td><td>Unbekannte Samsung-/Google-Sperre</td><td><b>Methode 3</b> (USB-Kabel + Computer): Sie umgeht das Installationsprogramm des Handys.</td></tr>
+</table>
+
+<h3>Methode 2 — Die Datei anders bekommen</h3>
+<p>Hilfreich, wenn der Download fehlschlägt oder die Datei beschädigt ist. Die .apk-Datei kann geschickt werden:</p>
+<ul>
+  <li>per <b>Quick Share</b> von einem anderen Samsung-Handy oder einem Windows-PC (die Datei landet in <span class="path">Eigene Dateien → Downloads</span>);</li>
+  <li>per <b>USB-Kabel</b> von einem Computer: Handy anschließen, in der USB-Benachrichtigung <b>Dateien übertragen</b> wählen, Datei in den Ordner <i>Download</i> des Handys kopieren.</li>
+</ul>
+<p>Dann Methode 1 ab <b>Schritt 4</b> fortsetzen.</p>
+
+<h3>Methode 3 — USB-Kabel + Computer (funktioniert garantiert)</h3>
+<p>Diese Methode hat funktioniert, als die direkte Installation verweigert wurde. Sie brauchen einen Computer (Windows, Mac oder Linux) und ein USB-C-Kabel.</p>
+<p><b>Auf dem Handy:</b></p>
+<ol>
+  <li>Entwickleroptionen einschalten: <span class="path">Einstellungen → Telefoninfo → Softwareinformationen</span> → <b>7-mal</b> auf „Buildnummer“ tippen (PIN eingeben). Die Meldung „Entwicklermodus wurde aktiviert“ erscheint.</li>
+  <li><span class="path">Einstellungen → Entwickleroptionen</span> → <b>USB-Debugging</b> einschalten.</li>
+  <li>Handy mit dem Computer verbinden, <b>Bildschirm entsperren</b>. Bei „USB-Debugging zulassen?“ <b>Von diesem Computer immer zulassen</b> ankreuzen → <span class="btn">Zulassen</span>.</li>
+</ol>
+<p><b>Auf dem Computer:</b></p>
+<ol>
+  <li>Die offiziellen „Android SDK Platform-Tools“ von Google herunterladen: <a href="https://developer.android.com/tools/releases/platform-tools">developer.android.com/tools/releases/platform-tools</a>, den Ordner <i>platform-tools</i> entpacken (z. B. nach <i>C:\platform-tools</i>).</li>
+  <li>Die .apk-Datei auf den Computer herunterladen (z. B. in <i>Downloads</i>).</li>
+  <li>Ein Terminal im Ordner <i>platform-tools</i> öffnen (Windows: im Explorer <code>cmd</code> in die Adresszeile tippen und Enter) und eingeben:</li>
+</ol>
+<pre>adb devices</pre>
+<p>Das Handy muss mit dem Wort <code>device</code> erscheinen. Steht dort <code>unauthorized</code>, auf das Handy schauen und <b>Zulassen</b> tippen. Dann:</p>
+<pre>adb install -r "%USERPROFILE%\Downloads\ingredients.apk"</pre>
+<p>(durch den echten Dateinamen ersetzen; auf Mac/Linux: <code>./adb install -r ~/Downloads/ingredients.apk</code>). Erscheint <code>Success</code>, ist die App installiert.</p>
+<p>Zum Schluss: <span class="path">Entwickleroptionen → USB-Debugging</span> → <b>aus</b>.</p>
+
+<div class="box warn">
+<b>Sicherheit:</b> Installieren Sie APKs nur aus einer Quelle, die Sie kennen (hier: die Person, die Ihnen den Link geschickt hat). Schalten Sie nach der Installation die Automatische Sperre und Play Protect immer wieder ein.
+</div>
+
+<h3>Nach der Installation: Updates</h3>
+<ul>
+  <li>Bei jedem Öffnen lädt die App die neue Version im Hintergrund. Ein Hinweis <b>„Eine neue Version der App ist bereit“</b> bietet <span class="btn">Neu starten, um sie zu installieren</span> an.</li>
+  <li>Ganz unten auf der Startseite zeigt der Block <b>App-Version</b> die Version und einen Knopf <span class="btn">Nach Updates suchen</span>.</li>
+  <li>Keine neue APK nötig, außer Sie werden ausdrücklich darum gebeten.</li>
+</ul>
+
+
+<h2 class="pb">Teil B — Die App benutzen</h2>
+<section class="step" id="s1"><div><h3><span class="num">1</span>Die Startseite und die Leiste unten</h3><p>Unten sind immer fünf Knöpfe zu sehen – ein Tipp genügt, um zu wechseln:</p>
+<ul>
+<li><b>Start</b> · <b>Scannen</b> · <b>Einkäufe</b> · <b>Verlauf</b> · <b>Profil</b>.</li>
+<li>Oben rechts: die <b>Lupe</b> 🔍 zum Suchen eines Produkts nach Name oder Marke, und das <b>Zahnrad</b> ⚙ für die Einstellungen.</li>
+<li><b>Prüfen für:</b> zeigt, für welche Person geprüft wird (wenn es mehrere Profile gibt). Namen antippen, um zu wechseln.</li>
+<li>Der große grüne Knopf <span class="btn">Barcode scannen</span> ist der schnellste Weg; darunter <span class="btn">Etikett fotografieren</span>.</li>
+<li><b>Zuletzt geprüft</b>: Ihre drei letzten Produkte, mit <span class="btn">Ganzer Verlauf</span>. Ganz unten: <span class="btn">App teilen</span>.</li>
+</ul></div><img src="img/v2/de/01-home.png" alt="Die Startseite und die Leiste unten" width="390" height="780"></section>
+<section class="step" id="s2"><div><h3><span class="num">2</span>Einstellungen (Zahnrad)</h3><ol>
+<li>Startseite → Zahnrad ⚙ oben rechts.</li>
+<li><b>Sprache</b>: <span class="btn">Français</span>, <span class="btn">Deutsch</span> oder <span class="btn">English</span>. Beim ersten Start nimmt die App die Sprache des Handys.</li>
+<li><b>Darstellung</b>: <i>System</i> (wie das Handy), <i>Hell</i> oder <i>Dunkel</i>.</li>
+<li><b>App-Version</b>: Ihre Version und <span class="btn">Nach Updates suchen</span>.</li>
+</ol></div><img src="img/v2/de/02-settings.png" alt="Einstellungen (Zahnrad)" width="390" height="780"></section>
+<section class="step" id="s3"><div><h3><span class="num">3</span>Profile anlegen (einmalig)</h3><p>Leiste unten → <span class="btn">Profil</span>. Alles bleibt <b>nur auf Ihrem Handy</b>.</p>
+<ol>
+<li>Unter <b>Profile</b> gibt es schon „Ich“. Für eine weitere Person (z. B. ein Kind mit Allergie): Vornamen eintippen → <span class="btn">Profil hinzufügen</span>.</li>
+<li>Das <b>grün markierte</b> Profil ist das, das Sie gerade einstellen und das für alle Urteile gilt.</li>
+<li><span class="btn">Umbenennen</span> ändert den Namen; „Profil … löschen“ entfernt es (nach einer Rückfrage).</li>
+</ol></div><img src="img/v2/de/03-profiles.png" alt="Profile anlegen (einmalig)" width="390" height="780"></section>
+<section class="step" id="s4"><div><h3><span class="num">4</span>Was ich meide, Allergien</h3><ol>
+<li><b>Was ich meide</b>: Schalter <i>Ohne Schwein und Alkohol</i>, <i>Vegetarisch</i>, <i>Vegan</i>. Unter jedem Schalter steht genau, was geprüft wird.</li>
+<li><b>Allergien und Unverträglichkeiten</b>: Tippen Sie die 14 EU-Allergene an, die Sie betreffen. Angetippte Allergene werden grün.</li>
+</ol>
+<div class="box tip">Ohne Profil erklärt die App die Zutaten, gibt aber kein Urteil ab.</div></div><img src="img/v2/de/04-avoid.png" alt="Was ich meide, Allergien" width="390" height="780"></section>
+<section class="step" id="s5"><div><h3><span class="num">5</span>Meine Gesundheit und Meine Regeln</h3><ol>
+<li><b>Meine Gesundheit</b>: was Ihr Arzt Ihnen rät einzuschränken – <i>Zucker</i>, <i>Salz</i>, <i>Gesättigte Fettsäuren</i>, <i>Bedenkliche Zusatzstoffe</i>. Ein Produkt mit hohem Gehalt wird dann „Prüfen“.</li>
+<li><b>Meine Regeln</b>: ein eigenes Wort, nach dem gesucht wird, z. B. „Palmöl“. <i>Verboten</i> oder <i>Beobachten</i> → <span class="btn">Regel hinzufügen</span>. Aus Versehen gelöscht? Unten erscheint kurz <span class="btn">Rückgängig</span>.</li>
+</ol></div><img src="img/v2/de/05-health.png" alt="Meine Gesundheit und Meine Regeln" width="390" height="780"></section>
+<section class="step" id="s6"><div><h3><span class="num">6</span>Ein Produkt scannen</h3><ol>
+<li>Leiste unten → <span class="btn">Scannen</span> (oder auf der Startseite <span class="btn">Barcode scannen</span>).</li>
+<li>Beim ersten Mal: <span class="btn">Kamera erlauben</span>. Die Bilder werden weder gespeichert noch gesendet.</li>
+<li>Barcode in den Rahmen halten: Er wird <b>grün</b>, das Handy <b>vibriert</b>, das Ergebnis öffnet sich.</li>
+<li>Kein Erfolg? Die Ziffern unter dem Barcode eintippen → <span class="btn">Diesen Code prüfen</span>.</li>
+<li>Auf derselben Seite: <span class="btn">Etikett fotografieren</span>, wenn ein Produkt unbekannt ist.</li>
+</ol></div><img src="img/v2/de/06-scan.png" alt="Ein Produkt scannen" width="390" height="780"></section>
+<section class="step" id="s7"><div><h3><span class="num">7</span>Das Ergebnis lesen</h3><ol>
+<li>Oben: Foto, Name und Marke des Produkts.</li>
+<li>Drei Knöpfe: <span class="btn">☆ Favorit</span>, <span class="btn">+ Einkaufsliste</span>, <span class="btn">⇄ Vergleichen</span>.</li>
+<li><b>Das Urteil</b> in einer farbigen Karte: <span class="green">✓ Geeignet</span>, <span class="orange">! Prüfen</span>, <span class="red">✕ Nicht geeignet</span> oder <b>? Unbekannt</b>. Darunter die <b>Verlässlichkeit</b>.</li>
+<li><span class="btn">Ergebnis vorlesen</span>: Das Handy liest das Urteil laut vor. Pfeil oben links: zurück dorthin, wo Sie waren.</li>
+</ol></div><img src="img/v2/de/07-result.png" alt="Das Ergebnis lesen" width="390" height="780"></section>
+<section class="step" id="s8"><div><h3><span class="num">8</span>Warum? und Alternativen</h3><ol>
+<li><b>Warum?</b> listet jeden Grund für das Urteil auf, mit dem Wort, wie es auf der Verpackung steht, und der Quelle.</li>
+<li>„Prüfen“ heißt: Die Daten erlauben keine sichere Antwort (z. B. Gelatine ohne Tierart). Verpackung ansehen oder den Hersteller fragen.</li>
+<li><span class="btn">Passende Alternativen suchen</span>: Produkte derselben Kategorie, die zu Ihnen passen. <b>Ohne Werbung</b>.</li>
+</ol></div><img src="img/v2/de/08-why.png" alt="Warum? und Alternativen" width="390" height="780"></section>
+<section class="step" id="s9"><div><h3><span class="num">9</span>Die hervorgehobene Zutatenliste</h3><ul>
+<li><span class="red">rot</span> = Sie meiden es · <span class="orange">orange</span> = prüfen · <span class="violet">violett</span> = Gesundheit: beobachten.</li>
+<li><b>Unterstrichen</b> = Zutat mit Erklärung: antippen. <b>Gepunktet</b> = der App noch unbekannt.</li>
+</ul></div><img src="img/v2/de/09-ingredients.png" alt="Die hervorgehobene Zutatenliste" width="390" height="780"></section>
+<section class="step" id="s10"><div><h3><span class="num">10</span>Gesundheit</h3><ul>
+<li>Zucker, Salz, gesättigte Fettsäuren und Fett <b>pro 100 g</b>, mit <i>niedrig / mittel / hoch</i>; Zucker in Würfelzucker, Salz in % des WHO-Tageshöchstwerts.</li>
+<li>Zutaten mit Gesundheitsrisiko und ihre Quellen (WHO, EFSA …). Ein gesundes Produkt bekommt <span class="green">Gute Wahl!</span></li>
+</ul></div><img src="img/v2/de/10-health-section.png" alt="Gesundheit" width="390" height="780"></section>
+<section class="step" id="s11"><div><h3><span class="num">11</span>Die Karte einer Zutat</h3><ul>
+<li><b>Was ist das?</b>, <b>Andere Namen</b> (auch E-Nummern), <b>Ausführlich</b> bei heiklen Fällen.</li>
+<li><b>Was das für Ihr Profil bedeutet</b>, Wirkung auf die Gesundheit, <b>amtliche und geprüfte Quellen</b> mit Prüfdatum.</li>
+</ul></div><img src="img/v2/de/11-ingredient.png" alt="Die Karte einer Zutat" width="390" height="780"></section>
+<section class="step" id="s12"><div><h3><span class="num">12</span>Zwei Produkte vergleichen</h3><ol>
+<li>Bei einem Produkt: <span class="btn">⇄ Vergleichen</span>, dann das 2. Produkt scannen oder auswählen.</li>
+<li>Beide nebeneinander: Urteil, Zucker, Salz, Fett, Zusatzstoffe, Nutri-Score. Das bessere ist <span class="green">besser</span> markiert.</li>
+</ol></div><img src="img/v2/de/12-compare.png" alt="Zwei Produkte vergleichen" width="390" height="780"></section>
+<section class="step" id="s13"><div><h3><span class="num">13</span>Verlauf und Favoriten</h3><ul>
+<li>Leiste unten → <span class="btn">Verlauf</span>: alle aufgerufenen Produkte, auch ohne Internet.</li>
+<li>Filter: <i>Alle</i> / <i>★ Favoriten</i>, nach Urteil und nach Kategorie. Die Urteile werden mit dem gewählten Profil neu berechnet.</li>
+</ul></div><img src="img/v2/de/13-history.png" alt="Verlauf und Favoriten" width="390" height="780"></section>
+<section class="step" id="s14"><div><h3><span class="num">14</span>Einkäufe: die Liste</h3><ol>
+<li>Bei einem Produkt: <span class="btn">+ Einkaufsliste</span>.</li>
+<li>Leiste unten → <span class="btn">Einkäufe</span> → oben <span class="btn">Liste</span>: Gekauftes abhaken; <span class="btn">Liste senden</span> per WhatsApp, SMS oder E-Mail.</li>
+<li>Für jemand anderen einkaufen? Oben dessen Profil wählen: Ein roter Hinweis zeigt Artikel, die nicht passen.</li>
+</ol></div><img src="img/v2/de/14-shopping.png" alt="Einkäufe: die Liste" width="390" height="780"></section>
+<section class="step" id="s15"><div><h3><span class="num">15</span>Einkäufe: die Kassenbons (neu)</h3><p>Nach dem Einkauf behalten Sie den Überblick über Ihre Ausgaben.</p>
+<ol>
+<li>Leiste unten → <span class="btn">Einkäufe</span> → oben <span class="btn">Kassenbons</span>.</li>
+<li><b>Diesen Monat</b>: Summe aller Bons des laufenden Monats.</li>
+<li>Jeder Bon zeigt Geschäft, Datum, Anzahl der Artikel und Betrag. <span class="green">Summe geprüft</span>: Die Artikel ergeben genau die Summe des Bons. <span class="orange">Differenz prüfen</span>: Es fehlt etwas oder ein Preis wurde falsch gelesen.</li>
+</ol></div><img src="img/v2/de/15-receipts.png" alt="Einkäufe: die Kassenbons (neu)" width="390" height="780"></section>
+<section class="step" id="s16"><div><h3><span class="num">16</span>Einen Kassenbon hinzufügen</h3><ol>
+<li><span class="btn">Kassenbon hinzufügen</span>. Zwei Schritte, in beliebiger Reihenfolge:</li>
+<li><span class="btn">QR-Code des Bons scannen</span> (unten auf dem Bon, falls vorhanden): genaue Summe, Mehrwertsteuer, Bar oder Karte, Datum.</li>
+<li><span class="btn">Bon fotografieren</span>: flach, ganz im Bild, ohne Spiegelung. Die App liest Artikel und Preise und erkennt das Geschäft.</li>
+<li>Gelesene Artikel prüfen und korrigieren (Name, Preis; Rabatt mit Minus: <i>-0,30</i>). <span class="btn">Artikel hinzufügen</span> für Vergessenes.</li>
+<li><b>Prüfung der Summe</b> vergleicht die Artikel mit der Summe des Bons → <span class="btn">Bon speichern</span>.</li>
+</ol>
+<div class="box warn">Das Foto wird an OCR.space geschickt, um den Text zu lesen. Verdecken Sie bei Bedarf das Ende des Bons (Kartennummer, Kundenkarte). Gespeicherte Bons bleiben auf dem Handy.</div></div><img src="img/v2/de/16-receipt-new.png" alt="Einen Kassenbon hinzufügen" width="390" height="780"></section>
+<section class="step" id="s17"><div><h3><span class="num">17</span>Einen Kassenbon ansehen</h3><ul>
+<li>Bon antippen: Summe, Ergebnis der Prüfung, <b>Zahlung</b> (Bar / Karte) und <b>Aufteilung nach Mehrwertsteuersatz</b> – 7 % sind meist Lebensmittel, 19 % Getränke, Drogerie und Sonstiges.</li>
+<li>Darunter alle Artikel mit Preis. Rabatte und Leergut erscheinen grün mit Minus.</li>
+<li><span class="btn">Bon löschen</span> entfernt ihn (nach einer Rückfrage).</li>
+</ul></div><img src="img/v2/de/17-receipt.png" alt="Einen Kassenbon ansehen" width="390" height="780"></section>
+<section class="step noimg" id="s18"><div><h3><span class="num">18</span>Ein Produkt suchen (Lupe)</h3><ol>
+<li>Startseite → Lupe 🔍 oben rechts.</li>
+<li>Namen oder Marke eintippen (auf Deutsch oft am besten) → <span class="btn">Suchen</span>. Jedes Ergebnis wird mit Ihrem Profil geprüft; <i>Nur passende für mich</i> filtert.</li>
+</ol></div></section>
+<section class="step noimg" id="s19"><div><h3><span class="num">19</span>Etikett fotografieren, Produkt hinzufügen</h3><ul>
+<li><span class="btn">Etikett fotografieren</span> (Startseite oder Scannen): den Absatz „Zutaten“ flach und scharf fotografieren, Text prüfen → <span class="btn">Analysieren</span>.</li>
+<li>Unbekanntes Produkt: <span class="btn">Dieses Produkt zu Open Food Facts hinzufügen</span> – mit Ihrem kostenlosen Konto auf openfoodfacts.org. Danach wird es <b>für alle</b> erkannt.</li>
+</ul></div></section>
+<section class="step noimg" id="s20"><div><h3><span class="num">20</span>Fehler melden, Updates, alles löschen</h3><ul>
+<li><span class="btn">Fehler melden</span> (unten in jedem Ergebnis): eine fertige E-Mail, ohne Ihr Profil.</li>
+<li><b>Updates</b> kommen von selbst: „Eine neue Version der App ist bereit“ → <span class="btn">Neu starten</span>. Selbst suchen: <span class="path">Zahnrad → App-Version → Nach Updates suchen</span>.</li>
+<li><span class="path">Profil → Meine Daten → Alles löschen</span>: Profile, Verlauf, Favoriten, Einkaufsliste, Kassenbons und Konto werden vom Handy gelöscht.</li>
+</ul></div></section>
+
+<h2>Teil C — Gut zu wissen</h2>
+<ul>
+<li>Die App <b>ersetzt weder die Verpackung noch Ihren Arzt noch eine religiöse Autorität</b>. Sie zertifiziert nichts. Bei schwerer Allergie immer das Etikett lesen.</li>
+<li>Wenn sie etwas nicht weiß, sagt sie es („Unbekannt“, niedrige Verlässlichkeit).</li>
+<li>Keine Werbung, kein Pflichtkonto. Produktdaten: Open Food Facts (Lizenz ODbL). Zum Lesen von Fotos wird das Bild an den Dienst OCR.space gesendet; Ihr Profil nie.</li>
+<li>Fragen oder Ideen? Schreiben Sie an <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
+</ul>
+<footer>Ingredients 0.6.0 · Anleitung v2 · Open Food Facts (ODbL)</footer>
+</div></body></html>
