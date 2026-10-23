@@ -218,13 +218,13 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Each receipt shows the shop, date, number of items and amount. <span class="green">Total checked</span>: the items add up exactly to the receipt total. <span class="orange">Difference to check</span>: an item is missing or a price was misread.</li>
 </ol></div><img src="img/v2/en/15-receipts.png" alt="Shopping: till receipts (new)" width="390" height="780"></section>
 <section class="step" id="s16"><div><h3><span class="num">16</span>Add a receipt</h3><ol>
-<li><span class="btn">Add a receipt</span>. Two steps, in any order:</li>
-<li><span class="btn">Scan the receipt’s QR code</span> (at the bottom, if there is one): exact total, VAT, cash or card, date.</li>
-<li><span class="btn">Photograph the receipt</span>: flat, all of it in the picture, no glare. The app reads the items and prices and recognises the shop.</li>
-<li>Check and correct the items (name, price; a discount with a minus: <i>-0.30</i>). <span class="btn">Add an item</span> for anything missed.</li>
-<li>The <b>Total check</b> compares the items with the receipt total → <span class="btn">Save the receipt</span>.</li>
+<li><span class="btn">Add a receipt</span> → <span class="btn">Scan the receipt</span>. The scanner finds the edges, crops and straightens the image. Long receipt: several shots, top to bottom, without overlap.</li>
+<li>The receipt is <b>read on the phone</b> (even offline): items, prices, total, shop and date. A photo from the gallery goes through <span class="btn">Choose a photo</span>.</li>
+<li>Check and correct the items (name, price; a discount with a minus: <i>-0.30</i>). An <span class="red">empty red box</span> is a price that could not be read: fill it in. <span class="btn">Photograph the rest of the receipt</span> adds more items.</li>
+<li>The <b>Total check</b> compares the items with the receipt total (or the VAT table) → <span class="btn">Save the receipt</span>.</li>
+<li>Optional: <span class="btn">Scan the QR code</span>, if the receipt has a sharp one. It only confirms the exact total; the items are not in it.</li>
 </ol>
-<div class="box warn">The photo is sent to OCR.space to read the text. Cover the bottom of the receipt (card number, loyalty card) if you prefer. Saved receipts stay on the phone.</div></div><img src="img/v2/en/16-receipt-new.png" alt="Add a receipt" width="390" height="780"></section>
+<div class="box tip">The photo stays on the phone. Only if reading it on the phone fails is it sent to OCR.space.</div></div><img src="img/v2/en/16-receipt-new.png" alt="Add a receipt" width="390" height="780"></section>
 <section class="step" id="s17"><div><h3><span class="num">17</span>View a receipt</h3><ul>
 <li>Tap a receipt: total, result of the check, <b>Payment</b> (cash / card) and <b>Split by VAT rate</b> – 7 % is mostly food, 19 % drinks, toiletries and the rest.</li>
 <li>Below, every item with its price. Discounts and returned bottles show in green with a minus.</li>
@@ -251,5 +251,5 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>No ads, no required account. Product data: Open Food Facts (ODbL licence). To read a photo, the image is sent to the OCR.space service; your profile, never.</li>
 <li>Questions or ideas? Write to <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
 </ul>
-<footer>Ingredients 0.6.0 · guide v2 · Open Food Facts (ODbL)</footer>
+<footer>Ingredients 0.7.0 · guide v2 · Open Food Facts (ODbL)</footer>
 </div></body></html>

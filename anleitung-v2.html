@@ -219,13 +219,13 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Jeder Bon zeigt Geschäft, Datum, Anzahl der Artikel und Betrag. <span class="green">Summe geprüft</span>: Die Artikel ergeben genau die Summe des Bons. <span class="orange">Differenz prüfen</span>: Es fehlt etwas oder ein Preis wurde falsch gelesen.</li>
 </ol></div><img src="img/v2/de/15-receipts.png" alt="Einkäufe: die Kassenbons (neu)" width="390" height="780"></section>
 <section class="step" id="s16"><div><h3><span class="num">16</span>Einen Kassenbon hinzufügen</h3><ol>
-<li><span class="btn">Kassenbon hinzufügen</span>. Zwei Schritte, in beliebiger Reihenfolge:</li>
-<li><span class="btn">QR-Code des Bons scannen</span> (unten auf dem Bon, falls vorhanden): genaue Summe, Mehrwertsteuer, Bar oder Karte, Datum.</li>
-<li><span class="btn">Bon fotografieren</span>: flach, ganz im Bild, ohne Spiegelung. Die App liest Artikel und Preise und erkennt das Geschäft.</li>
-<li>Gelesene Artikel prüfen und korrigieren (Name, Preis; Rabatt mit Minus: <i>-0,30</i>). <span class="btn">Artikel hinzufügen</span> für Vergessenes.</li>
-<li><b>Prüfung der Summe</b> vergleicht die Artikel mit der Summe des Bons → <span class="btn">Bon speichern</span>.</li>
+<li><span class="btn">Kassenbon hinzufügen</span> → <span class="btn">Bon scannen</span>. Der Scanner findet die Ränder, schneidet zu und richtet das Bild gerade. Langer Bon: mehrere Aufnahmen von oben nach unten, ohne Überlappung.</li>
+<li>Der Bon wird <b>auf dem Handy gelesen</b> (auch ohne Internet): Artikel, Preise, Summe, Geschäft und Datum. Ein Foto aus der Galerie geht mit <span class="btn">Foto auswählen</span>.</li>
+<li>Gelesene Artikel prüfen und korrigieren (Name, Preis; Rabatt mit Minus: <i>-0,30</i>). Ein <span class="red">rotes leeres Feld</span> ist ein nicht gelesener Preis: ergänzen. <span class="btn">Rest des Bons fotografieren</span> fügt weitere Artikel hinzu.</li>
+<li><b>Prüfung der Summe</b> vergleicht die Artikel mit der Summe des Bons (oder mit der Mehrwertsteuer-Tabelle) → <span class="btn">Bon speichern</span>.</li>
+<li>Optional: <span class="btn">QR-Code scannen</span>, falls der Bon einen scharfen QR-Code hat. Er bestätigt nur die genaue Summe; die Artikel stehen nicht darin.</li>
 </ol>
-<div class="box warn">Das Foto wird an OCR.space geschickt, um den Text zu lesen. Verdecken Sie bei Bedarf das Ende des Bons (Kartennummer, Kundenkarte). Gespeicherte Bons bleiben auf dem Handy.</div></div><img src="img/v2/de/16-receipt-new.png" alt="Einen Kassenbon hinzufügen" width="390" height="780"></section>
+<div class="box tip">Das Foto bleibt auf dem Handy. Nur wenn das Lesen auf dem Handy scheitert, wird es an OCR.space geschickt.</div></div><img src="img/v2/de/16-receipt-new.png" alt="Einen Kassenbon hinzufügen" width="390" height="780"></section>
 <section class="step" id="s17"><div><h3><span class="num">17</span>Einen Kassenbon ansehen</h3><ul>
 <li>Bon antippen: Summe, Ergebnis der Prüfung, <b>Zahlung</b> (Bar / Karte) und <b>Aufteilung nach Mehrwertsteuersatz</b> – 7 % sind meist Lebensmittel, 19 % Getränke, Drogerie und Sonstiges.</li>
 <li>Darunter alle Artikel mit Preis. Rabatte und Leergut erscheinen grün mit Minus.</li>
@@ -252,5 +252,5 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Keine Werbung, kein Pflichtkonto. Produktdaten: Open Food Facts (Lizenz ODbL). Zum Lesen von Fotos wird das Bild an den Dienst OCR.space gesendet; Ihr Profil nie.</li>
 <li>Fragen oder Ideen? Schreiben Sie an <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
 </ul>
-<footer>Ingredients 0.6.0 · Anleitung v2 · Open Food Facts (ODbL)</footer>
+<footer>Ingredients 0.7.0 · Anleitung v2 · Open Food Facts (ODbL)</footer>
 </div></body></html>

@@ -219,13 +219,13 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Chaque ticket montre le magasin, la date, le nombre d’articles et le montant. <span class="green">Total vérifié</span> : les articles font exactement le total du ticket. <span class="orange">Écart à vérifier</span> : il manque un article ou un prix a été mal lu.</li>
 </ol></div><img src="img/v2/fr/15-receipts.png" alt="Courses : les tickets de caisse (nouveau)" width="390" height="780"></section>
 <section class="step" id="s16"><div><h3><span class="num">16</span>Ajouter un ticket</h3><ol>
-<li><span class="btn">Ajouter un ticket</span>. Deux étapes, dans l’ordre que vous voulez :</li>
-<li><span class="btn">Scanner le QR code du ticket</span> (en bas du ticket, s’il y en a un) : total exact, TVA, espèces ou carte, date.</li>
-<li><span class="btn">Photographier le ticket</span> : bien à plat, tout le ticket dans l’image, sans reflet. L’app lit les articles et les prix, et reconnaît le magasin.</li>
-<li>Relisez et corrigez les articles (nom, prix ; une remise avec un moins : <i>-0,30</i>). <span class="btn">Ajouter un article</span> pour un oubli.</li>
-<li>Le <b>Contrôle du total</b> compare les articles au total du ticket → <span class="btn">Enregistrer le ticket</span>.</li>
+<li><span class="btn">Ajouter un ticket</span> → <span class="btn">Scanner le ticket</span>. Le scanner trouve les bords, recadre et redresse l’image. Ticket long : plusieurs prises, de haut en bas, sans chevauchement.</li>
+<li>Le ticket est <b>lu sur le téléphone</b> (même sans Internet) : articles, prix, total, magasin et date. Une photo de la galerie passe par <span class="btn">Choisir une photo</span>.</li>
+<li>Relisez et corrigez les articles (nom, prix ; une remise avec un moins : <i>-0,30</i>). Une <span class="red">case vide en rouge</span> est un prix non lu : complétez-la. <span class="btn">Photographier la suite du ticket</span> ajoute des articles.</li>
+<li>Le <b>Contrôle du total</b> compare les articles au total du ticket (ou à la table de TVA) → <span class="btn">Enregistrer le ticket</span>.</li>
+<li>Facultatif : <span class="btn">Scanner le QR code</span>, si le ticket en a un et qu’il est net. Il confirme seulement le total exact ; les articles n’y figurent pas.</li>
 </ol>
-<div class="box warn">La photo est envoyée à OCR.space pour lire le texte. Cachez le bas du ticket (numéro de carte, carte de fidélité) si vous préférez. Les tickets enregistrés restent sur le téléphone.</div></div><img src="img/v2/fr/16-receipt-new.png" alt="Ajouter un ticket" width="390" height="780"></section>
+<div class="box tip">La photo reste sur le téléphone. Seulement si la lecture sur le téléphone échoue, elle est envoyée à OCR.space.</div></div><img src="img/v2/fr/16-receipt-new.png" alt="Ajouter un ticket" width="390" height="780"></section>
 <section class="step" id="s17"><div><h3><span class="num">17</span>Consulter un ticket</h3><ul>
 <li>Touchez un ticket : total, résultat du contrôle, <b>Paiement</b> (espèces / carte) et <b>Répartition par taux de TVA</b> – 7 % correspond surtout à l’alimentation, 19 % aux boissons, à l’hygiène et au reste.</li>
 <li>Dessous, tous les articles avec leur prix. Remises et consigne rendue apparaissent en vert avec un moins.</li>
@@ -252,5 +252,5 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Aucune publicité, aucun compte obligatoire. Données produits : Open Food Facts (licence ODbL). Pour lire une photo, l’image est envoyée au service OCR.space ; votre profil, jamais.</li>
 <li>Questions ou idées ? Écrivez à <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
 </ul>
-<footer>Ingredients 0.6.0 · guide v2 · Open Food Facts (ODbL)</footer>
+<footer>Ingredients 0.7.0 · guide v2 · Open Food Facts (ODbL)</footer>
 </div></body></html>
