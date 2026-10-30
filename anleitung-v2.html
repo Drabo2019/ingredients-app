@@ -58,7 +58,7 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <div class="box tip noprint"><a href="anleitung.html">Frühere Anleitung (Version 1, Startseite mit Kacheln)</a></div>
 <h2>Inhalt</h2>
 <ol class="toc"><li><a href="#a">Teil A — App installieren</a></li></ol>
-<ol class="toc"><li><a href="#s1">Der Bildschirm „Scannen“ und die Leiste unten</a></li><li><a href="#s2">Einstellungen (Zahnrad)</a></li><li><a href="#s3">Profile anlegen (einmalig)</a></li><li><a href="#s4">Was ich meide, Allergien</a></li><li><a href="#s5">Meine Gesundheit und Meine Regeln</a></li><li><a href="#s6">Ein Produkt scannen</a></li><li><a href="#s7">Das Ergebnis lesen</a></li><li><a href="#s8">Warum? und Alternativen</a></li><li><a href="#s9">Die hervorgehobene Zutatenliste</a></li><li><a href="#s10">Gesundheit</a></li><li><a href="#s11">Die Karte einer Zutat</a></li><li><a href="#s12">Zwei Produkte vergleichen</a></li><li><a href="#s13">Verlauf und Favoriten</a></li><li><a href="#s14">Einkäufe: die Liste</a></li><li><a href="#s15">Einkauf planen, mit Erinnerung (neu)</a></li><li><a href="#s16">Einkäufe: die Kassenbons</a></li><li><a href="#s17">Mehrere Kassenbons auswählen und senden (neu)</a></li><li><a href="#s18">Einen Kassenbon hinzufügen</a></li><li><a href="#s19">Einen Kassenbon ansehen</a></li><li><a href="#s20">Ein Produkt suchen (Lupe)</a></li><li><a href="#s21">Etikett fotografieren, Produkt hinzufügen</a></li><li><a href="#s22">Fehler melden, Updates, alles löschen</a></li></ol>
+<ol class="toc"><li><a href="#s1">Der Bildschirm „Scannen“ und die Leiste unten</a></li><li><a href="#s2">Einstellungen (Zahnrad)</a></li><li><a href="#s3">Profile anlegen (einmalig)</a></li><li><a href="#s4">Was ich meide, Allergien</a></li><li><a href="#s5">Meine Gesundheit und Meine Regeln</a></li><li><a href="#s6">Ein Produkt scannen</a></li><li><a href="#s7">Das Ergebnis lesen</a></li><li><a href="#s8">Warum? und Alternativen</a></li><li><a href="#s9">Die hervorgehobene Zutatenliste</a></li><li><a href="#s10">Gesundheit</a></li><li><a href="#s11">Die Karte einer Zutat</a></li><li><a href="#s12">Zwei Produkte vergleichen</a></li><li><a href="#s13">Verlauf und Favoriten</a></li><li><a href="#s14">Einkäufe: die Liste</a></li><li><a href="#s15">Einkauf planen, mit Erinnerung (neu)</a></li><li><a href="#s16">Alarmen wiederholen und ansehen (neu)</a></li><li><a href="#s17">Mehrere Artikel auswählen (neu)</a></li><li><a href="#s18">Einkäufe: die Kassenbons</a></li><li><a href="#s19">Mehrere Kassenbons auswählen und senden (neu)</a></li><li><a href="#s20">Einen Kassenbon hinzufügen</a></li><li><a href="#s21">Einen Kassenbon ansehen</a></li><li><a href="#s22">Ein Produkt suchen (Lupe)</a></li><li><a href="#s23">Etikett fotografieren, Produkt hinzufügen</a></li><li><a href="#s24">Fehler melden, Updates, alles löschen</a></li></ol>
 <h2 id="a">Teil A — App installieren</h2>
 <div class="box tip"><b>Welche APK?</b> Auf der <a href="index.html">Download-Seite</a>: <b>„Standard“</b> passt für fast alle Handys seit 2017. Meldet das Handy „App nicht installiert“ oder „nicht kompatibel“, nehmen Sie <b>„Ältere Handys (32-Bit)“</b>. Im Zweifel: <b>„Universal“</b> (größer, passt überall).</div>
 <h3>Bevor Sie anfangen</h3>
@@ -157,7 +157,8 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <section class="step" id="s3"><div><h3><span class="num">3</span>Profile anlegen (einmalig)</h3><p>Leiste unten → <span class="btn">Profil</span>. Alles bleibt <b>nur auf Ihrem Handy</b>.</p>
 <ol>
 <li>Unter <b>Profile</b> gibt es schon „Ich“. Für eine weitere Person (z. B. ein Kind mit Allergie): Vornamen eintippen → <span class="btn">Profil hinzufügen</span>.</li>
-<li>Das <b>grün markierte</b> Profil ist das, das Sie gerade einstellen und das für alle Urteile gilt.</li>
+<li>Antippen eines Namens öffnet dessen Einstellungen (<b>grün umrandet</b>). Der <b>Schalter</b> daneben nimmt die Person in die Urteile auf oder nicht. „Ich“ ist Ihr eigenes Profil, die anderen sind <i>Mitglieder</i>.</li>
+<li><b>Mehrere Personen zusammen</b>: Aktivierte Personen zählen gemeinsam, was eine meidet, wird für alle gemieden. Beispiel: Jules verträgt nur Milch nicht, Lea keine Milchprodukte – beide aktiv: Milchprodukte werden gemeldet. Verreist Lea, schalten Sie sie aus: Es zählt nur Jules. Eine Person bleibt immer aktiv.</li>
 <li><span class="btn">Umbenennen</span> ändert den Namen; „Profil … löschen“ entfernt es (nach einer Rückfrage).</li>
 </ol></div><img src="img/v2/de/03-profiles.png" alt="Profile anlegen (einmalig)" width="390" height="780"></section>
 <section class="step" id="s4"><div><h3><span class="num">4</span>Was ich meide, Allergien</h3><ol>
@@ -210,31 +211,43 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <section class="step" id="s14"><div><h3><span class="num">14</span>Einkäufe: die Liste</h3><ol>
 <li>Zwei Wege: bei einem Produkt <span class="btn">+ Einkaufsliste</span>, oder oben in der Liste <b>einfach hineinschreiben</b> (z. B. „Milch“) und mit <b>+</b> bestätigen.</li>
 <li>Leiste unten → <span class="btn">Einkäufe</span> → oben <span class="btn">Liste</span>. Haken setzen = gekauft. <span class="btn">Liste senden</span> per WhatsApp, SMS oder E-Mail (mit Menge und Termin).</li>
-<li><b>Filter</b>: <i>Zu kaufen</i>, <i>Favoriten</i>, <i>Diese Woche</i>, <i>Gekauft</i>, <i>Archiv</i>. Der <b>Stern</b> macht einen Artikel zum Favoriten.</li>
+<li><b>Filter</b>: <i>Zu kaufen</i>, <i>Favoriten</i>, <i>Diese Woche</i>, <i>Alarme</i>, <i>Gekauft</i>, <i>Archiv</i>. Der <b>Stern</b> macht einen Artikel zum Favoriten.</li>
 <li><b>Wischen</b>: einen Artikel nach <b>rechts</b> = archivieren, nach <b>links</b> = löschen. Unten erscheint kurz <span class="btn">Rückgängig</span>.</li>
+<li><b>Lange drücken</b> wählt Artikel aus. Weitere antippen, dann <span class="btn">Senden</span>, <span class="btn">Archivieren</span> oder <span class="btn">Löschen</span> für alle zusammen.</li>
 <li>Für jemand anderen einkaufen? Oben dessen Profil wählen: Ein roter Hinweis zeigt Artikel, die nicht passen.</li>
 </ol></div><img src="img/v2/de/14-shopping.png" alt="Einkäufe: die Liste" width="390" height="780"></section>
 <section class="step" id="s15"><div><h3><span class="num">15</span>Einkauf planen, mit Erinnerung (neu)</h3><p>Tippen Sie auf <span class="btn">Planen</span> (oder auf das Kalender-Symbol bei einem Artikel).</p>
 <ol>
-<li><b>Artikel</b> und <b>Menge</b> (z. B. „2“ oder „500 g“).</li>
-<li><b>Wann</b>: ein Tag der nächsten 14 Tage (<i>Heute</i>, <i>Morgen</i> …) und die <b>Uhrzeit</b>.</li>
-<li><b>Erinnerung (Alarm)</b>: zur geplanten Zeit, 30 Minuten, 1 Stunde oder 1 Tag vorher. Die Erinnerung ist eine Benachrichtigung des Handys: Erlauben Sie sie, wenn Android danach fragt.</li>
+<li><b>Titel</b> (z. B. „Einkauf für Geburtstag“) und <b>Beschreibung</b> (z. B. „5. Geburtstag von Luc“).</li>
+<li><b>Anzahl der Elemente</b>: mit <b>−</b> und <b>+</b> (1, 2 … beliebig viele).</li>
+<li><b>Wann</b>: ein vollständiger Kalender – Jahr (<b>«</b> <b>»</b>) und Monat (<b>‹</b> <b>›</b>) wechseln, dann den Tag antippen. Danach <b>Stunde</b> und <b>Minuten</b> mit − / + (oder :00, :15, :30, :45).</li>
+<li><b>Erinnerung (Alarm)</b>: zur geplanten Zeit, 15 oder 30 Minuten, 1 oder 2 Stunden oder 1 Tag vorher. Die Erinnerung ist eine Benachrichtigung des Handys: Erlauben Sie sie, wenn Android danach fragt.</li>
+<li><b>Alarm wiederholen</b>: Nein, oder alle 5 / 10 / 15 / 30 / 60 Minuten, 2 bis 10 Mal. Die <b>geplanten Alarme</b> stehen darunter.</li>
 <li><b>Favorit</b> → <span class="btn">Speichern</span>. Der Termin steht dann am Artikel (rot, wenn er überfällig ist).</li>
 </ol>
-<div class="box tip">Erinnerungen funktionieren ab Version 0.8.0 (neue Datei installieren). Abgehakte, archivierte oder gelöschte Artikel haben keine Erinnerung mehr.</div></div><img src="img/v2/de/14b-shopping-add.png" alt="Einkauf planen, mit Erinnerung (neu)" width="390" height="780"></section>
-<section class="step" id="s16"><div><h3><span class="num">16</span>Einkäufe: die Kassenbons</h3><p>Nach dem Einkauf behalten Sie den Überblick über Ihre Ausgaben.</p>
+<p>Alle Alarme ansehen oder löschen: Filter <i>Alarme</i> in der Liste, Papierkorb beim Artikel.</p>
+<div class="box tip">Neu ab Version 0.9.0 (neue Datei installieren). Abgehakte, archivierte oder gelöschte Artikel haben keine Erinnerung mehr.</div></div><img src="img/v2/de/14b-shopping-add.png" alt="Einkauf planen, mit Erinnerung (neu)" width="390" height="780"></section>
+<section class="step" id="s16"><div><h3><span class="num">16</span>Alarmen wiederholen und ansehen (neu)</h3><ol>
+<li>Unter <b>Alarm wiederholen</b> wählen Sie „Alle 5 / 10 / 15 / 30 / 60 Minuten“ und wie oft (2 bis 10 Mal). Darunter stehen alle <b>geplanten Alarme</b> mit Uhrzeit.</li>
+<li>Später alle Alarme sehen: Filter <i>Alarme</i> in der Liste. Der <b>Papierkorb</b> beim Artikel löscht seine Alarme.</li>
+</ol></div><img src="img/v2/de/14c-shopping-alarms.png" alt="Alarmen wiederholen und ansehen (neu)" width="390" height="780"></section>
+<section class="step" id="s17"><div><h3><span class="num">17</span>Mehrere Artikel auswählen (neu)</h3><ol>
+<li><b>Lange auf einen Artikel drücken</b>: Er wird ausgewählt, oben erscheint eine Leiste.</li>
+<li>Weitere Artikel antippen, dann <span class="btn">Senden</span>, <span class="btn">Archivieren</span> oder <span class="btn">Löschen</span> – für alle zusammen. <span class="btn">Alle</span> wählt alle sichtbaren Artikel, das ✕ beendet die Auswahl.</li>
+</ol></div><img src="img/v2/de/14d-shopping-select.png" alt="Mehrere Artikel auswählen (neu)" width="390" height="780"></section>
+<section class="step" id="s18"><div><h3><span class="num">18</span>Einkäufe: die Kassenbons</h3><p>Nach dem Einkauf behalten Sie den Überblick über Ihre Ausgaben.</p>
 <ol>
 <li>Leiste unten → <span class="btn">Einkäufe</span> → oben <span class="btn">Kassenbons</span>.</li>
 <li><b>Filter</b>: <i>Alle</i>, <i>Favoriten</i>, <i>Dieser Monat</i>, <i>3 Monate</i>, <i>Archiv</i>. Über der Liste steht die <b>Summe</b> und die Anzahl der Bons des Filters.</li>
 <li>Jeder Bon zeigt Geschäft, Datum, Anzahl der Artikel und Betrag; der <b>Stern</b> macht ihn zum Favoriten. <span class="green">Summe geprüft</span>: Die Artikel ergeben genau die Summe des Bons. <span class="orange">Differenz prüfen</span>: Es fehlt etwas oder ein Preis wurde falsch gelesen.</li>
 <li><b>Wischen</b>: nach <b>rechts</b> = archivieren, nach <b>links</b> = löschen (mit <span class="btn">Rückgängig</span>).</li>
 </ol></div><img src="img/v2/de/15-receipts.png" alt="Einkäufe: die Kassenbons" width="390" height="780"></section>
-<section class="step" id="s17"><div><h3><span class="num">17</span>Mehrere Kassenbons auswählen und senden (neu)</h3><ol>
+<section class="step" id="s19"><div><h3><span class="num">19</span>Mehrere Kassenbons auswählen und senden (neu)</h3><ol>
 <li>Einen Bon <b>lange drücken</b>: Die Auswahl beginnt. Weitere Bons antippen; <span class="btn">Alle</span> wählt alle.</li>
 <li><span class="btn">Senden</span> schickt Geschäft, Datum, Summe und alle Artikel per WhatsApp, SMS oder E-Mail.</li>
 <li><span class="btn">Archivieren</span> und <span class="btn">Löschen</span> gelten für alle gewählten Bons (mit <span class="btn">Rückgängig</span>). Das ✕ oben beendet die Auswahl.</li>
 </ol></div><img src="img/v2/de/15b-receipts-select.png" alt="Mehrere Kassenbons auswählen und senden (neu)" width="390" height="780"></section>
-<section class="step" id="s18"><div><h3><span class="num">18</span>Einen Kassenbon hinzufügen</h3><ol>
+<section class="step" id="s20"><div><h3><span class="num">20</span>Einen Kassenbon hinzufügen</h3><ol>
 <li><span class="btn">Kassenbon hinzufügen</span> → <span class="btn">Bon scannen</span>. Der Scanner findet die Ränder, schneidet zu und richtet das Bild gerade. Langer Bon: mehrere Aufnahmen von oben nach unten, ohne Überlappung.</li>
 <li>Der Bon wird <b>auf dem Handy gelesen</b> (auch ohne Internet): Artikel, Preise, Summe, Geschäft und Datum. Ein Foto aus der Galerie geht mit <span class="btn">Foto auswählen</span>.</li>
 <li>Gelesene Artikel prüfen und korrigieren (Name, Preis; Rabatt mit Minus: <i>-0,30</i>). Ein <span class="red">rotes leeres Feld</span> ist ein nicht gelesener Preis: ergänzen. <span class="btn">Rest des Bons fotografieren</span> fügt weitere Artikel hinzu.</li>
@@ -242,20 +255,20 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Optional: <span class="btn">QR-Code scannen</span>, falls der Bon einen scharfen QR-Code hat. Er bestätigt nur die genaue Summe; die Artikel stehen nicht darin.</li>
 </ol>
 <div class="box tip">Das Foto bleibt auf dem Handy. Nur wenn das Lesen auf dem Handy scheitert, wird es an OCR.space geschickt.</div></div><img src="img/v2/de/16-receipt-new.png" alt="Einen Kassenbon hinzufügen" width="390" height="780"></section>
-<section class="step" id="s19"><div><h3><span class="num">19</span>Einen Kassenbon ansehen</h3><ul>
+<section class="step" id="s21"><div><h3><span class="num">21</span>Einen Kassenbon ansehen</h3><ul>
 <li>Bon antippen: Summe, Ergebnis der Prüfung, <b>Zahlung</b> (Bar / Karte) und <b>Aufteilung nach Mehrwertsteuersatz</b> – 7 % sind meist Lebensmittel, 19 % Getränke, Drogerie und Sonstiges.</li>
 <li>Darunter alle Artikel mit Preis. Rabatte und Leergut erscheinen grün mit Minus.</li>
 <li><span class="btn">Bon löschen</span> entfernt ihn (nach einer Rückfrage).</li>
 </ul></div><img src="img/v2/de/17-receipt.png" alt="Einen Kassenbon ansehen" width="390" height="780"></section>
-<section class="step noimg" id="s20"><div><h3><span class="num">20</span>Ein Produkt suchen (Lupe)</h3><ol>
+<section class="step noimg" id="s22"><div><h3><span class="num">22</span>Ein Produkt suchen (Lupe)</h3><ol>
 <li>Scannen → Lupe 🔍 oben rechts.</li>
 <li>Namen oder Marke eintippen (auf Deutsch oft am besten) → <span class="btn">Suchen</span>. Jedes Ergebnis wird mit Ihrem Profil geprüft; <i>Nur passende für mich</i> filtert.</li>
 </ol></div></section>
-<section class="step noimg" id="s21"><div><h3><span class="num">21</span>Etikett fotografieren, Produkt hinzufügen</h3><ul>
+<section class="step noimg" id="s23"><div><h3><span class="num">23</span>Etikett fotografieren, Produkt hinzufügen</h3><ul>
 <li><span class="btn">Etikett fotografieren</span> (Bildschirm Scannen): den Absatz „Zutaten“ flach und scharf fotografieren, Text prüfen → <span class="btn">Analysieren</span>.</li>
 <li>Unbekanntes Produkt: <span class="btn">Dieses Produkt zu Open Food Facts hinzufügen</span> – mit Ihrem kostenlosen Konto auf openfoodfacts.org. Danach wird es <b>für alle</b> erkannt.</li>
 </ul></div></section>
-<section class="step noimg" id="s22"><div><h3><span class="num">22</span>Fehler melden, Updates, alles löschen</h3><ul>
+<section class="step noimg" id="s24"><div><h3><span class="num">24</span>Fehler melden, Updates, alles löschen</h3><ul>
 <li><span class="btn">Fehler melden</span> (unten in jedem Ergebnis): eine fertige E-Mail, ohne Ihr Profil.</li>
 <li><b>Updates</b> kommen von selbst: „Eine neue Version der App ist bereit“ → <span class="btn">Neu starten</span>. Selbst suchen: <span class="path">Zahnrad → App-Version → Nach Updates suchen</span>.</li>
 <li><span class="path">Profil → Meine Daten → Alles löschen</span>: Profile, Verlauf, Favoriten, Einkaufsliste, Kassenbons und Konto werden vom Handy gelöscht.</li>
@@ -268,5 +281,5 @@ footer { color:var(--muted); font-size:14px; margin:40px 0 20px; }
 <li>Keine Werbung, kein Pflichtkonto. Produktdaten: Open Food Facts (Lizenz ODbL). Zum Lesen von Fotos wird das Bild an den Dienst OCR.space gesendet; Ihr Profil nie.</li>
 <li>Fragen oder Ideen? Schreiben Sie an <a href="mailto:draboibro@gmail.com">draboibro@gmail.com</a>.</li>
 </ul>
-<footer>Ingredients 0.8.0 · Anleitung v2 · Open Food Facts (ODbL)</footer>
+<footer>Ingredients 0.9.0 · Anleitung v2 · Open Food Facts (ODbL)</footer>
 </div></body></html>
